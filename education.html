@@ -878,4 +878,1237 @@
 
         .review-service {
             font-size: 12px;
-            line-height: 
+            line-height: 1;
+            font-weight: 400;
+            color: var(--gray-color);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .review-text {
+            font-size: 16px;
+            line-height: 1.5;
+            font-weight: 400;
+            color: var(--light-gray);
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Contacts Section */
+        .contacts-section {
+            background-color: var(--dark-bg);
+            padding: 100px 0;
+        }
+
+        .contacts-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .contacts-info {
+            flex: 1;
+        }
+
+        .contacts-title {
+            font-size: 38px;
+            line-height: 1.1;
+            font-weight: 400;
+            color: white;
+            font-family: 'SouthGhetto', serif;
+            margin-bottom: 20px;
+        }
+
+        .contacts-text {
+            font-size: 28px;
+            line-height: 1.2;
+            font-weight: 400;
+            color: white;
+            font-family: 'SouthGhetto', serif;
+            margin-bottom: 20px;
+        }
+
+        .contacts-address {
+            font-size: 14px;
+            color: var(--gray-color);
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-icon svg {
+            width: 100%;
+            height: 100%;
+            fill: var(--secondary-color);
+        }
+
+        .contacts-map {
+            flex: 1;
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+        }
+
+        /* Footer */
+        footer {
+            background: var(--card-bg);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 18px;
+            margin-bottom: 25px;
+            position: relative;
+            font-family: 'SouthGhetto', serif;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--secondary-color);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .footer-note {
+            font-size: 10px;
+            line-height: 1;
+            font-weight: 400;
+            color: #555555;
+            font-family: 'Inter', sans-serif;
+            margin-top: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1199px) {
+            .payment-content,
+            .contacts-content {
+                flex-direction: column;
+            }
+            
+            .payment-image {
+                height: 300px;
+            }
+            
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 959px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                flex-direction: column;
+                background: var(--primary-color);
+                width: 100%;
+                text-align: center;
+                transition: var(--transition);
+                padding: 30px 0;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .about-card {
+                min-width: 380px;
+            }
+
+            .portfolio-item {
+                min-width: 350px;
+            }
+
+            .portfolio-item img {
+                height: 350px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content,
+            .teachers-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+
+            .about-slider,
+            .portfolio-slider,
+            .reviews-slider {
+                gap: 10px;
+            }
+
+            .about-card {
+                min-width: 240px;
+            }
+
+            .portfolio-item {
+                min-width: 280px;
+            }
+
+            .portfolio-item img {
+                height: 280px;
+            }
+
+            .review-card {
+                min-width: 280px;
+            }
+
+            .slider-button {
+                width: 30px;
+                height: 30px;
+            }
+
+            .slider-button svg {
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        /* Cookie notification */
+        .cookie-notification {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 15px 25px;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            max-width: 90%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .cookie-notification.hidden {
+            opacity: 0;
+            transform: translateX(-50%) translateY(20px);
+            pointer-events: none;
+        }
+
+        .cookie-text {
+            font-size: 12px;
+            line-height: 1.5;
+            font-weight: 400;
+            color: var(--light-gray);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .cookie-text a {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+
+        .cookie-btn {
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            border: none;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .cookie-btn:hover {
+            background: #e65a2a;
+        }
+
+        .cookie-close {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loader with scissors animation -->
+    <div class="loader" id="loader">
+        <div class="scissors">
+            <div class="scissor scissor-left"></div>
+            <div class="scissor scissor-right"></div>
+            <div class="scissors-handle"></div>
+            <div class="scissors-handle scissors-handle-right"></div>
+        </div>
+    </div>
+
+    <!-- Cookie notification -->
+    <div class="cookie-notification" id="cookieNotification">
+        <div class="cookie-text">
+            Caйт иcпoльзуeт cookie-фaйлы, чтoбы cдeлaть вaшe пpeбывaниe нa нeм мaкcимaльнo удoбным. Ocтaвaяcь нa caйтe, вы дaётe cвoe <a href="/agreement" target="_blank" rel="noreferrer noopener">coглacиe нa иcпoльзoвaниe cookie-фaйлoв</a>.
+        </div>
+        <button class="cookie-btn">Ок, не показывать</button>
+        <button class="cookie-close" aria-label="Закрыть уведомление">×</button>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Black<span>Barber</span></a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="index.html#services">Услуги</a></li>
+                <li><a href="index.html#masters">Мастера</a></li>
+                <li><a href="index.html#certificate">Сертификат</a></li>
+                <li><a href="index.html#portfolio">Портфолио</a></li>
+                <li><a href="#about" class="active">О курсе</a></li>
+                <li><a href="#program">Программа</a></li>
+                <li><a href="#teachers">Преподаватели</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="t-cover">
+        <div class="t-cover__carrier"
+            style="background-image: url('https://images.unsplash.com/photo-1596461444120-3c51d8de8a58?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
+        </div>
+        <div class="t-cover__filter"></div>
+        <div class="t-container">
+            <div class="t-width t-width_10" style="margin:0 auto;">
+                <div class="t-cover__wrapper" style="height:100vh; position: relative;z-index:1;">
+                    <div class="t182">
+                        <div class="t182__wrapper">
+                            <div class="t182__content-wrapper">
+                                <h1 class="t-cover__title">Научим <span style="color: rgb(255, 107, 53);">стричь</span> профессионально</h1>
+                                <div class="t-cover__descr">Практический курс от мастеров Black Ufa: работа на моделях, понятная система, быстрый рост навыков.</div>
+                                <div class="t182__buttons">
+                                    <a href="#registration" class="btn btn-secondary">Записаться на курс</a>
+                                    <a href="#program" class="btn btn-outline">Посмотреть программу</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="section-number">1 / О курсе</div>
+            <h2 class="section-title"><span>Станьте</span> <span style="color: rgb(255, 107, 53);">мастером</span> мужских стрижек</h2>
+            <p style="text-align: left; font-size: 16px; line-height: 1.5; max-width: 400px; margin: 0 auto 40px; font-weight: 400; color: var(--light-gray); font-family: 'Inter', sans-serif;">Освойте ключевые приёмы и начните работать с клиентами.</p>
+            
+            <div class="slider-controls">
+                <div class="slider-buttons">
+                    <button class="slider-button slider-prev">
+                        <svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="presentation">
+                            <path d="M18.0093 13.5289L12.1461 19.5425M12.1461 19.5425L18.0093 25.556M12.1461 19.5425H26.8539" stroke="#060606" stroke-width="2px" vector-effect="non-scaling-stroke" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <button class="slider-button slider-next">
+                        <svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="presentation">
+                            <path d="M18.0093 13.5289L12.1461 19.5425M12.1461 19.5425L18.0093 25.556M12.1461 19.5425H26.8539" stroke="#060606" stroke-width="2px" vector-effect="non-scaling-stroke" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="scroll-icon">
+                    <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 300" height="42" width="42">
+                        <rect class="tooltip-horizontal-scroll-icon_card" x="480" width="200" height="200" rx="5" fill="rgba(255,255,255,0.2)"></rect>
+                        <rect class="tooltip-horizontal-scroll-icon_card" y="0" width="200" height="200" rx="5" fill="rgba(255,255,255,0.2)"></rect>
+                        <rect class="tooltip-horizontal-scroll-icon_card" x="240" width="200" height="200" rx="5" fill="rgba(255,255,255,0.2)"></rect>
+                        <path class="tooltip-horizontal-scroll-icon_hand" d="M78.9579 285.7C78.9579 285.7 37.8579 212.5 20.5579 180.8C-2.44209 138.6 -6.2422 120.8 9.6579 112C19.5579 106.5 33.2579 108.8 41.6579 123.4L61.2579 154.6V32.3C61.2579 32.3 60.0579 0 83.0579 0C107.558 0 105.458 32.3 105.458 32.3V91.7C105.458 91.7 118.358 82.4 133.458 86.6C141.158 88.7 150.158 92.4 154.958 104.6C154.958 104.6 185.658 89.7 200.958 121.4C200.958 121.4 236.358 114.4 236.358 151.1C236.358 187.8 192.158 285.7 192.158 285.7H78.9579Z" fill="rgba(255,255,255,1)"></path>
+                        <style>.tooltip-horizontal-scroll-icon_hand{animation:tooltip-horizontal-scroll-icon_anim-scroll-hand 2s infinite}.tooltip-horizontal-scroll-icon_card{animation:tooltip-horizontal-scroll-icon_anim-scroll-card 2s infinite}@keyframes tooltip-horizontal-scroll-icon_anim-scroll-hand{0%{transform:translateX(80px) scale(1);opacity:0}10%{transform:translateX(80px) scale(1);opacity:1}20%,60%{transform:translateX(175px) scale(.6);opacity:1}80%{transform:translateX(5px) scale(.6);opacity:1}to{transform:translateX(5px) scale(.6);opacity:0}}@keyframes tooltip-horizontal-scroll-icon_anim-scroll-card{0%,60%{transform:translateX(0)}80%,to{transform:translateX(-240px)}}</style>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="about-slider" id="aboutSlider">
+                <div class="about-card">
+                    <div class="section-number">/1</div>
+                    <h3>Классическим мужским стрижкам с чистой формой</h3>
+                    <p>Освоите базовые техники и научитесь делать аккуратные стрижки под любой стиль.</p>
+                </div>
+                
+                <div class="about-card">
+                    <div class="section-number">/2</div>
+                    <h3>Фейду и переходам «в ноль» на профессиональном уровне</h3>
+                    <p>Сможете делать плавные переходы без ступенек и добиваться идеального фейда.</p>
+                </div>
+                
+                <div class="about-card">
+                    <div class="section-number">/3</div>
+                    <h3>Оформлению бороды и контура с идеальной симметрией</h3>
+                    <p>Научитесь делать бороду аккуратной, симметричной и подходящей клиенту.</p>
+                </div>
+                
+                <div class="about-card">
+                    <div class="section-number">/4</div>
+                    <h3>Работе ножницами и контролю формы</h3>
+                    <p>Поймёте, как уверенно работать ножницами и создавать точные силуэты.</p>
+                </div>
+                
+                <div class="about-card">
+                    <div class="section-number">/5</div>
+                    <h3>Подбору стрижки под лицо и рост волос</h3>
+                    <p>Сможете выбирать стиль, который подчёркивает сильные стороны клиента.</p>
+                </div>
+                
+                <div class="about-card">
+                    <div class="section-number">/6</div>
+                    <h3>Консультациям, сервису и удержанию клиентов</h3>
+                    <p>Освоите общение, сервис и подход, который превращает клиентов в постоянных.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Section -->
+    <section class="section program-section" id="program">
+        <div class="container">
+            <div class="section-number">2 / Программа</div>
+            <h2 class="section-title"><span>Программа</span> <span style="color: rgb(255, 107, 53);">обучения</span></h2>
+            <p style="text-align: center; font-size: 16px; line-height: 1.5; max-width: 450px; margin: 0 auto 40px; font-weight: 400; color: var(--light-gray); font-family: 'Inter', sans-serif;">5 тем, которые приводят к уверенной самостоятельной работе барбера.</p>
+            
+            <div class="accordion">
+                <div class="accordion-header">
+                    <h3 class="accordion-title"><span style="color: rgb(255, 107, 53);">Тема 1.</span> База барберства</h3>
+                    <div class="accordion-icon">
+                        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="20" stroke-width="0" />
+                            <g class="t1118__lines" stroke-width="1px" fill="none">
+                                <path d="M9 20H31" />
+                                <path d="M20 9V31" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        Что изучите: фундамент профессии и правильный подход к классической мужской стрижке.<br /><br />
+                        1/ Инструменты барбера<br />
+                        Как пользоваться машинками, ножницами, триммером, шейвером и расческой. Уход и безопасность.<br /><br />
+                        2/ Формы головы и работа с топ-зоной<br />
+                        Как определить форму головы и подобрать стрижку, сведение зон, работа ножницами.<br /><br />
+                        3/ Височно-боковая зона + затылок<br />
+                        Построение формы, насадки, контрольные линии, тушевка.<br /><br />
+                        4/ Окантовка и чистота стрижки<br />
+                        Чёткие линии, ровный контур, работа без торчащих волос.<br /><br />
+                        5/ Мытьё головы и сервис<br />
+                        Правильное положение клиента, техника мойки, комфорт, аккуратность.<br /><br />
+                        6/ Полная базовая стрижка от начала до завершения<br />
+                        Соединение всех зон, укладка, финальная проверка, фото результата.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion">
+                <div class="accordion-header">
+                    <h3 class="accordion-title"><span style="color: rgb(255, 107, 53);">Тема 2.</span> Переходы и фейд</h3>
+                    <div class="accordion-icon">
+                        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="20" stroke-width="0" />
+                            <g class="t1118__lines" stroke-width="1px" fill="none">
+                                <path d="M9 20H31" />
+                                <path d="M20 9V31" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        Что изучите: современные популярные техники переходов и идеальную чистоту fade.<br /><br />
+                        /1 Построение фейда<br />
+                        Работа с насадками 0−10 мм, формирование линии веса, плавность перехода.<br /><br />
+                        2/ Техника «без насадки»<br />
+                        Работа открытым, полуоткрытым и закрытым ножом. Умение стирать линии.<br /><br />
+                        3/ Сведение зон<br />
+                        Как соединять височно-боковую, затылочную и топ-зону в единую форму.<br /><br />
+                        4/ Доработка и устранение дефектов<br />
+                        Удаление торчащих волос, подчистка зон, контроль симметрии.<br /><br />
+                        5/ Окантовка при fade<br />
+                        Работа с контуром, точность, аккуратность.<br /><br />
+                        6/ Укладка после фейда<br />
+                        Подбор стайлинга и обучение правильной укладке клиента.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion">
+                <div class="accordion-header">
+                    <h3 class="accordion-title"><span style="color: rgb(255, 107, 53);">Тема 3.</span> Борода и контуринг</h3>
+                    <div class="accordion-icon">
+                        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="20" stroke-width="0" />
+                            <g class="t1118__lines" stroke-width="1px" fill="none">
+                                <path d="M9 20H31" />
+                                <path d="M20 9V31" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        Что изучите: профессиональные техники работы с бородой — от формы до работы шаветкой.<br /><br />
+                        1/ Консультация и подбор формы бороды<br />
+                        Как анализировать лицо, структуру волос и выбирать индивидуальный стиль.<br /><br />
+                        2/ Техника стрижки бороды<br />
+                        Машинка, ножницы, симметрия, работа с различной длиной.<br /><br />
+                        3/ Контур и чёткие линии<br />
+                        Триммер, шаветка, натяжка кожи, аккуратность, безопасность.<br /><br />
+                        4/ Распаривание и уход<br />
+                        Полотенце, подготовка кожи, комфорт клиента.<br /><br />
+                        5/ Переходы между стрижкой и бородой<br />
+                        Как идеально свести зоны при классике и fade.<br /><br />
+                        6/ Гигиена и сервис при работе с бородой<br />
+                        Перчатки, стерильность, корректный уход после процедуры.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion">
+                <div class="accordion-header">
+                    <h3 class="accordion-title"><span style="color: rgb(255, 107, 53);">Тема 4.</span> Работа с клиентом</h3>
+                    <div class="accordion-icon">
+                        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="20" stroke-width="0" />
+                            <g class="t1118__lines" stroke-width="1px" fill="none">
+                                <path d="M9 20H31" />
+                                <path d="M20 9V31" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        Что изучите: навыки, которые формируют профессионального и популярного барбера.<br /><br />
+                        1/ Встреча клиента<br />
+                        Как создать первое впечатление, расположить к себе и построить доверие.<br /><br />
+                        2/ Диалог и клиентский сервис<br />
+                        Темы для общения, поддержание контакта, умение слушать.<br /><br />
+                        3/ Правильные вопросы перед стрижкой<br />
+                        Чтобы точно понять ожидания: длина, стиль, рост волос, переходы.<br /><br />
+                        4/ Работа во время стрижки<br />
+                        Комфорт клиента, чистота рабочей зоны, грамотная подача.<br /><br />
+                        5/ Рекомендации по уходу<br />
+                        Как консультировать клиента по волосам, бороде и стайлингу.<br /><br />
+                        6/ Возвращаемость клиентов<br />
+                        Как сделать так, чтобы мужчина возвращался именно к вам и приводил друзей.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion">
+                <div class="accordion-header">
+                    <h3 class="accordion-title"><span style="color: rgb(255, 107, 53);">Тема 5.</span> Итоговая практика</h3>
+                    <div class="accordion-icon">
+                        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="20" stroke-width="0" />
+                            <g class="t1118__lines" stroke-width="1px" fill="none">
+                                <path d="M9 20H31" />
+                                <path d="M20 9V31" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        Что изучите: умение провести целую услугу полностью самостоятельно.<br /><br />
+                        1/ Приём клиента<br />
+                        Приветствие, консультация, мойка головы.<br /><br />
+                        2/ Полная стрижка в выбранной технике<br />
+                        Классика или фейд: выполняете весь алгоритм от начала до потолка.<br /><br />
+                        3/ Доработка формы<br />
+                        Устранение торчащих волос, чистота линий, контроль симметрии.<br /><br />
+                        4/ Работа с бородой (по желанию клиента)<br />
+                        Подравнивание, оформление, контур.<br /><br />
+                        5/ Укладка и финальный образ<br />
+                        Объяснение клиенту, как повторить укладку дома.<br /><br />
+                        6/ Завершение услуги<br />
+                        Фото для портфолио, корректная коммуникация, прощание.
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 45px;">
+                <a href="#registration" class="btn btn-secondary">Записаться на курс</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teachers Section -->
+    <section class="section teachers-section" id="teachers">
+        <div class="container">
+            <div class="section-number">3 / Преподаватели</div>
+            <h2 class="section-title"><span>Кто</span> <span style="color: rgb(255, 107, 53);">обучает</span></h2>
+            <p style="text-align: left; font-size: 16px; line-height: 1.5; max-width: 400px; margin: 0 auto 40px; font-weight: 400; color: var(--light-gray); font-family: 'Inter', sans-serif; padding-bottom: 40px;">Освойте ключевые приёмы и начните работать с клиентами.</p>
+            
+            <div class="teachers-grid">
+                <div class="teacher-card">
+                    <div class="teacher-images">
+                        <div class="teacher-img-first" style="background-image: url('https://images.unsplash.com/photo-1524502397800-2f82475a6257?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');"></div>
+                        <div class="teacher-img-second" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');"></div>
+                    </div>
+                    <div class="teacher-content">
+                        <div class="teacher-subtitle">Сооснователь Barbershop Black Ufa</div>
+                        <h3 class="teacher-title">Руслан</h3>
+                        <p class="teacher-desc">Автор курса и сооснователь Barbershop Black Ufa. Практикующий мастер с опытом работы более 7 лет. Обучает классике, фейду, работе с формой и бородой, готовит учеников к реальной работе и помогает отточить технику до уверенного уровня.</p>
+                    </div>
+                </div>
+                
+                <div class="teacher-card">
+                    <div class="teacher-images">
+                        <div class="teacher-img-first" style="background-image: url('https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');"></div>
+                        <div class="teacher-img-second" style="background-image: url('https://images.unsplash.com/photo-1524504516771-d1d7b32f4c52?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');"></div>
+                    </div>
+                    <div class="teacher-content">
+                        <div class="teacher-subtitle">Топ-мастер Barbershop Black Ufa</div>
+                        <h3 class="teacher-title">Идель</h3>
+                        <p class="teacher-desc">Гранд барбер с опытом работы в разных городах России около 7 лет. Настоящий профи, который покажет современные техники стрижек и работы с бородой, а также научит аккуратной тушёвке и чистоте исполнения.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section portfolio-section" id="portfolio">
+        <div class="container">
+            <div class="section-number">4 / Работы учеников</div>
+            <h2 class="section-title"><span style="color: rgb(255, 107, 53);">Результаты</span> наших учеников</h2>
+            
+            <div class="slider-controls">
+                <div class="slider-buttons">
+                    <button class="slider-button slider-prev">
+                        <svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="presentation">
+                            <path d="M18.0093 13.5289L12.1461 19.5425M12.1461 19.5425L18.0093 25.556M12.1461 19.5425H26.8539" stroke="#ffffff" stroke-width="2px" vector-effect="non-scaling-stroke" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <button class="slider-button slider-next">
+                        <svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="presentation">
+                            <path d="M18.0093 13.5289L12.1461 19.5425M12.1461 19.5425L18.0093 25.556M12.1461 19.5425H26.8539" stroke="#ffffff" stroke-width="2px" vector-effect="non-scaling-stroke" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="scroll-icon">
+                    <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 300" height="42" width="42">
+                        <rect class="tooltip-horizontal-scroll-icon_card" x="480" width="200" height="200" rx="5" fill="rgba(190,190,190,0.3)"></rect>
+                        <rect class="tooltip-horizontal-scroll-icon_card" y="0" width="200" height="200" rx="5" fill="rgba(190,190,190,0.3)"></rect>
+                        <rect class="tooltip-horizontal-scroll-icon_card" x="240" width="200" height="200" rx="5" fill="rgba(190,190,190,0.3)"></rect>
+                        <path class="tooltip-horizontal-scroll-icon_hand" d="M78.9579 285.7C78.9579 285.7 37.8579 212.5 20.5579 180.8C-2.44209 138.6 -6.2422 120.8 9.6579 112C19.5579 106.5 33.2579 108.8 41.6579 123.4L61.2579 154.6V32.3C61.2579 32.3 60.0579 0 83.0579 0C107.558 0 105.458 32.3 105.458 32.3V91.7C105.458 91.7 118.358 82.4 133.458 86.6C141.158 88.7 150.158 92.4 154.958 104.6C154.958 104.6 185.658 89.7 200.958 121.4C200.958 121.4 236.358 114.4 236.358 151.1C236.358 187.8 192.158 285.7 192.158 285.7H78.9579Z" fill="rgba(190,190,190,1)"></path>
+                        <style>.tooltip-horizontal-scroll-icon_hand{animation:tooltip-horizontal-scroll-icon_anim-scroll-hand 2s infinite}.tooltip-horizontal-scroll-icon_card{animation:tooltip-horizontal-scroll-icon_anim-scroll-card 2s infinite}@keyframes tooltip-horizontal-scroll-icon_anim-scroll-hand{0%{transform:translateX(80px) scale(1);opacity:0}10%{transform:translateX(80px) scale(1);opacity:1}20%,60%{transform:translateX(175px) scale(.6);opacity:1}80%{transform:translateX(5px) scale(.6);opacity:1}to{transform:translateX(5px) scale(.6);opacity:0}}@keyframes tooltip-horizontal-scroll-icon_anim-scroll-card{0%,60%{transform:translateX(0)}80%,to{transform:translateX(-240px)}}</style>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="portfolio-slider" id="portfolioSlider">
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1596461444120-3c51d8de8a58?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Работа ученика">
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1529626455594-4ff08052d05c?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Работа ученика">
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1524502397800-2f82475a6257?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Работа ученика">
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Работа ученика">
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Работа ученика">
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Работа ученика">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Section -->
+    <section class="section payment-section" id="payment">
+        <div class="container">
+            <div class="section-number">5 / Стоимость</div>
+            <div class="payment-content">
+                <div class="payment-text">
+                    <h2>Обучение, которое <span style="color: rgb(255, 107, 53);">окупается</span></h2>
+                    <p>Максимум практики, наставничества и уверенности в результате за 21 день.</p>
+                    
+                    <div class="payment-features">
+                        <div class="payment-feature">
+                            <div class="feature-icon">
+                                <img src="https://static.tildacdn.com/lib/icons/bullets/check5.svg" alt="Иконка" data-color="#eb7317">
+                            </div>
+                            <div class="feature-text">
+                                <h3>Вы работаете руками с первого дня — без лишней теории.</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-feature">
+                            <div class="feature-icon">
+                                <img src="https://static.tildacdn.com/lib/icons/bullets/check5.svg" alt="Иконка" data-color="#eb7317">
+                            </div>
+                            <div class="feature-text">
+                                <h3>Мы предоставляем моделей для опыта настоящей работы.</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-feature">
+                            <div class="feature-icon">
+                                <img src="https://static.tildacdn.com/lib/icons/bullets/check5.svg" alt="Иконка" data-color="#eb7317">
+                            </div>
+                            <div class="feature-text">
+                                <h3>Преподаватели учат технике, исправляют ошибки и ведут до конца.</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-feature">
+                            <div class="feature-icon">
+                                <img src="https://static.tildacdn.com/lib/icons/bullets/check5.svg" alt="Иконка" data-color="#eb7317">
+                            </div>
+                            <div class="feature-text">
+                                <h3>Поможем собрать фото, выстроить сервис и начать принимать клиентов.</h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-price">50 000 ₽</div>
+                    
+                    <a href="#registration" class="btn btn-secondary">Оставить заявку</a>
+                </div>
+                <div class="payment-image"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="section reviews-section" id="reviews">
+        <div class="container">
+            <div class="section-number">6 / Отзывы</div>
+            <h2 class="section-title"><span>Нам доверяют</span> <span style="color: rgb(255, 107, 53);">сотни</span> клиентов</h2>
+            
+            <div class="slider-controls">
+                <div class="slider-buttons">
+                    <button class="slider-button slider-prev">
+                        <svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="presentation">
+                            <path d="M18.0093 13.5289L12.1461 19.5425M12.1461 19.5425L18.0093 25.556M12.1461 19.5425H26.8539" stroke="#ffffff" stroke-width="2px" vector-effect="non-scaling-stroke" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <button class="slider-button slider-next">
+                        <svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="presentation">
+                            <path d="M18.0093 13.5289L12.1461 19.5425M12.1461 19.5425L18.0093 25.556M12.1461 19.5425H26.8539" stroke="#ffffff" stroke-width="2px" vector-effect="non-scaling-stroke" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="scroll-icon">
+                    <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 300" height="42" width="42">
+                        <rect class="tooltip-horizontal-scroll-icon_card" x="480" width="200" height="200" rx="5" fill="rgba(255,255,255,0.2)"></rect>
+                        <rect class="tooltip-horizontal-scroll-icon_card" y="0" width="200" height="200" rx="5" fill="rgba(255,255,255,0.2)"></rect>
+                        <rect class="tooltip-horizontal-scroll-icon_card" x="240" width="200" height="200" rx="5" fill="rgba(255,255,255,0.2)"></rect>
+                        <path class="tooltip-horizontal-scroll-icon_hand" d="M78.9579 285.7C78.9579 285.7 37.8579 212.5 20.5579 180.8C-2.44209 138.6 -6.2422 120.8 9.6579 112C19.5579 106.5 33.2579 108.8 41.6579 123.4L61.2579 154.6V32.3C61.2579 32.3 60.0579 0 83.0579 0C107.558 0 105.458 32.3 105.458 32.3V91.7C105.458 91.7 118.358 82.4 133.458 86.6C141.158 88.7 150.158 92.4 154.958 104.6C154.958 104.6 185.658 89.7 200.958 121.4C200.958 121.4 236.358 114.4 236.358 151.1C236.358 187.8 192.158 285.7 192.158 285.7H78.9579Z" fill="rgba(255,255,255,1)"></path>
+                        <style>.tooltip-horizontal-scroll-icon_hand{animation:tooltip-horizontal-scroll-icon_anim-scroll-hand 2s infinite}.tooltip-horizontal-scroll-icon_card{animation:tooltip-horizontal-scroll-icon_anim-scroll-card 2s infinite}@keyframes tooltip-horizontal-scroll-icon_anim-scroll-hand{0%{transform:translateX(80px) scale(1);opacity:0}10%{transform:translateX(80px) scale(1);opacity:1}20%,60%{transform:translateX(175px) scale(.6);opacity:1}80%{transform:translateX(5px) scale(.6);opacity:1}to{transform:translateX(5px) scale(.6);opacity:0}}@keyframes tooltip-horizontal-scroll-icon_anim-scroll-card{0%,60%{transform:translateX(0)}80%,to{transform:translateX(-240px)}}</style>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="reviews-slider" id="reviewsSlider">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div>
+                            <div class="review-title">Андрей</div>
+                        </div>
+                    </div>
+                    <div class="review-text">Курс полностью оправдал мои ожидания. Практики было много, преподаватели объясняли всё понятно, и уже после пары занятий я смог делать классические стрижки на уровне профи.</div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div>
+                            <div class="review-title">Валерий</div>
+                        </div>
+                    </div>
+                    <div class="review-text">Отличная подача материала и индивидуальный подход. Особенно понравилось, как нас учили работать с фейдом и бородой — теперь уверен в своих руках и клиентах.</div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div>
+                            <div class="review-title">Алина</div>
+                        </div>
+                    </div>
+                    <div class="review-text">Приятная атмосфера, профессиональные наставники и реальные модели на практике. Чувствую, что готова сразу работать и развиваться дальше в профессии.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section class="section contacts-section" id="contacts">
+        <div class="container">
+            <div class="section-number">7 / Контакты</div>
+            <div class="contacts-content">
+                <div class="contacts-info">
+                    <h2 class="contacts-title">Мы всегда <span style="color: rgb(255, 107, 53);">на связи</span></h2>
+                    <div class="contacts-text">Ответим на вопросы и поможем выбрать дату старта курса.</div>
+                    <div class="contacts-address">
+                        г. Уфа, Айская 84<br />
+                        <span style="color: rgb(141, 141, 141); font-family: Inter; font-size: 14px;">11:00 - 21:00</span><br /><br />
+                        <a href="tel:+79961060394">+7 996 106 03-94</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://t.me/blackbarberufa" target="_blank" class="social-icon" aria-label="telegram">
+                            <svg class="social-icon_svg" role="presentation" width="25px" height="25px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M83.1797 17.5886C83.1797 17.5886 90.5802 14.7028 89.9635 21.711C89.758 24.5968 87.9079 34.6968 86.4688 45.6214L81.5351 77.9827C81.5351 77.9827 81.124 82.7235 77.4237 83.548C73.7233 84.3724 68.173 80.6623 67.145 79.8378C66.3227 79.2195 51.7273 69.9438 46.5878 65.4092C45.1488 64.1724 43.5042 61.6989 46.7934 58.8132L68.3785 38.201C70.8454 35.7274 73.3122 29.956 63.0336 36.9642L34.2535 56.5459C34.2535 56.5459 30.9644 58.6071 24.7973 56.752L11.4351 52.6295C11.4351 52.6295 6.50135 49.5377 14.9298 46.4457C35.4871 36.7579 60.7724 26.864 83.1797 17.5886Z" fill="#eb7317"/>
+                            </svg>
+                        </a>
+                        <a href="https://vk.com/black_barbershop" target="_blank" class="social-icon" aria-label="vk">
+                            <svg class="social-icon_svg" role="presentation" width="25px" height="25px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M53.7512 76.4147C25.0516 76.4147 8.68207 56.7395 8 24H22.376C22.8482 48.03 33.4463 58.2086 41.8411 60.3073V24H55.3782V44.7245C63.668 43.8326 72.3765 34.3885 75.3146 24H88.8514C86.5954 36.802 77.1513 46.2461 70.4355 50.1287C77.1513 53.2767 87.9076 61.5141 92 76.4147H77.0988C73.8983 66.446 65.9241 58.7333 55.3782 57.684V76.4147H53.7512Z" fill="#eb7317"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/black_barber_ufa?igsh=Z2k5ZjU5bjY5OXZx" target="_blank" class="social-icon" aria-label="instagram">
+                            <svg class="social-icon_svg" role="presentation" width="25px" height="25px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M66.9644 10H33.04C20.3227 10 10 20.3227 10 32.9573V67.1167C10 79.6816 20.3227 90 33.04 90H66.96C79.6816 90 90 79.6816 90 67.0384V32.9616C90.0044 20.3227 79.6816 10 66.9644 10ZM29.2 50.0022C29.2 38.5083 38.5257 29.2 50.0022 29.2C61.4786 29.2 70.8 38.5083 70.8 50.0022C70.8 61.4961 61.4743 70.8 50.0022 70.8C38.5257 70.8 29.2 61.4961 29.2 50.0022ZM72.8854 31.2027C70.2079 31.2027 68.0789 29.0824 68.0789 26.4049C68.0789 23.7273 70.2035 21.6027 72.8854 21.6027C75.5586 21.6027 77.6833 23.7273 77.6833 26.4049C77.6833 29.0824 75.5586 31.2027 72.8854 31.2027Z" fill="#eb7317"/>
+                                <path d="M50.0022 36.4011C42.4659 36.4011 36.4011 42.4876 36.4011 50.0022C36.4011 57.5124 42.4659 63.6033 50.0022 63.6033C57.5429 63.6033 63.6033 57.5124 63.6033 50.0022C63.6033 42.492 57.4514 36.4011 50.0022 36.4011Z" fill="#eb7317"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="contacts-map"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Popup -->
+    <div class="t-popup" id="registrationPopup" style="display: none; background-color: rgba(6,6,6,0.60);">
+        <div class="t-popup__close t-popup__block-close">
+            <button type="button" class="t-popup__close-wrapper t-popup__block-close-button" aria-label="Закрыть диалоговое окно">
+                <svg role="presentation" class="t-popup__close-icon" width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g stroke="none" stroke-width="1" fill="#ffffff" fill-rule="evenodd">
+                        <rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+                        <rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+                    </g>
+                </svg>
+            </button>
+        </div>
+        <div class="t-popup__container t-width t-width_6" style="background-color:#060606; border-radius: 10px; overflow: hidden;">
+            <div style="padding: 40px;">
+                <h2 class="section-title" style="margin-bottom: 20px; text-align: left;">
+                    <span>Оставьте заявку</span> <span style="color: rgb(255, 107, 53);">на курс</span>
+                </h2>
+                <p style="font-size: 16px; line-height: 1.5; max-width: 300px; margin-bottom: 30px; font-weight: 400; color: var(--light-gray); font-family: 'Inter', sans-serif;">Ответим на вопросы и поможем выбрать дату старта курса.</p>
+                <form id="registrationForm">
+                    <div style="margin-bottom: 20px;">
+                        <input type="text" placeholder="Имя" style="width: 100%; padding: 12px 15px; border-radius: 5px; border: 1px solid #d6d6d6; background-color: #262626; color: #d6d6d6; font-family: 'Inter', sans-serif;">
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <input type="tel" placeholder="Телефон" style="width: 100%; padding: 12px 15px; border-radius: 5px; border: 1px solid #d6d6d6; background-color: #262626; color: #d6d6d6; font-family: 'Inter', sans-serif;">
+                    </div>
+                    <div style="margin-bottom: 20px; display: flex; align-items: center;">
+                        <input type="checkbox" id="agreement" style="margin-right: 10px;">
+                        <label for="agreement" style="color: #d6d6d6; font-size: 14px; font-family: 'Inter', sans-serif;">Я подтверждаю ознакомление и даю <a href="/agreement" target="_blank" style="color: #eb7317; text-decoration: underline;">Согласие на обработку моих персональных данных</a> в порядке и на условиях, указанных в <a href="/policy" target="_blank" style="color: #eb7317; text-decoration: underline;">Политике обработки персональных данных</a></label>
+                    </div>
+                    <button type="submit" class="btn btn-secondary" style="width: 100%;">Оставить заявку</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>BlackBarber</h3>
+                    <p style="font-size: 14px; line-height: 1.5; font-weight: 400; color: var(--light-gray); font-family: 'Inter', sans-serif;">Профессиональный мужской барбершоп в Уфе с многолетним опытом работы. Создаем стиль, который подчеркивает ваш характер.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Ссылки</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="index.html#services">Услуги</a></li>
+                        <li><a href="index.html#masters">Мастера</a></li>
+                        <li><a href="index.html#certificate">Сертификат</a></li>
+                        <li><a href="index.html#portfolio">Портфолио</a></li>
+                        <li><a href="index.html#contacts">Контакты</a></li>
+                        <li><a href="education.html">Обучение</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Контакты</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-phone"></i> +7 (996) 106-03-94</li>
+                        <li><i class="fas fa-envelope"></i> info@blackbarberufa.ru</li>
+                        <li><i class="fas fa-map-marker-alt"></i> г. Уфа, ул. 8 Марта, 22</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Соцсети</h3>
+                    <ul class="footer-links social-links-footer" style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <li><a href="https://t.me/blackbarbershopufa" target="_blank" rel="nofollow" aria-label="telegram" class="social-icon">
+                            <svg class="social-icon_svg" role="presentation" width="20px" height="20px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M83.1797 17.5886C83.1797 17.5886 90.5802 14.7028 89.9635 21.711C89.758 24.5968 87.9079 34.6968 86.4688 45.6214L81.5351 77.9827C81.5351 77.9827 81.124 82.7235 77.4237 83.548C73.7233 84.3724 68.173 80.6623 67.145 79.8378C66.3227 79.2195 51.7273 69.9438 46.5878 65.4092C45.1488 64.1724 43.5042 61.6989 46.7934 58.8132L68.3785 38.201C70.8454 35.7274 73.3122 29.956 63.0336 36.9642L34.2535 56.5459C34.2535 56.5459 30.9644 58.6071 24.7973 56.752L11.4351 52.6295C11.4351 52.6295 6.50135 49.5377 14.9298 46.4457C35.4871 36.7579 60.7724 26.864 83.1797 17.5886Z" fill="#eb7317"/>
+                            </svg>
+                        </a></li>
+                        <li><a href="https://vk.com/black_barbershop" target="_blank" rel="nofollow" aria-label="vk" class="social-icon">
+                            <svg class="social-icon_svg" role="presentation" width="20px" height="20px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M53.7512 76.4147C25.0516 76.4147 8.68207 56.7395 8 24H22.376C22.8482 48.03 33.4463 58.2086 41.8411 60.3073V24H55.3782V44.7245C63.668 43.8326 72.3765 34.3885 75.3146 24H88.8514C86.5954 36.802 77.1513 46.2461 70.4355 50.1287C77.1513 53.2767 87.9076 61.5141 92 76.4147H77.0988C73.8983 66.446 65.9241 58.7333 55.3782 57.684V76.4147H53.7512Z" fill="#eb7317"/>
+                            </svg>
+                        </a></li>
+                        <li><a href="https://www.instagram.com/black_barber_ufa?igsh=Z2k5ZjU5bjY5OXZx" target="_blank" rel="nofollow" aria-label="instagram" class="social-icon">
+                            <svg class="social-icon_svg" role="presentation" width="20px" height="20px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M66.9644 10H33.04C20.3227 10 10 20.3227 10 32.9573V67.1167C10 79.6816 20.3227 90 33.04 90H66.96C79.6816 90 90 79.6816 90 67.0384V32.9616C90.0044 20.3227 79.6816 10 66.9644 10ZM29.2 50.0022C29.2 38.5083 38.5257 29.2 50.0022 29.2C61.4786 29.2 70.8 38.5083 70.8 50.0022C70.8 61.4961 61.4743 70.8 50.0022 70.8C38.5257 70.8 29.2 61.4961 29.2 50.0022ZM72.8854 31.2027C70.2079 31.2027 68.0789 29.0824 68.0789 26.4049C68.0789 23.7273 70.2035 21.6027 72.8854 21.6027C75.5586 21.6027 77.6833 23.7273 77.6833 26.4049C77.6833 29.0824 75.5586 31.2027 72.8854 31.2027Z" fill="#eb7317"/>
+                                <path d="M50.0022 36.4011C42.4659 36.4011 36.4011 42.4876 36.4011 50.0022C36.4011 57.5124 42.4659 63.6033 50.0022 63.6033C57.5429 63.6033 63.6033 57.5124 63.6033 50.0022C63.6033 42.492 57.4514 36.4011 50.0022 36.4011Z" fill="#eb7317"/>
+                            </svg>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 BlackBarber. Все права защищены.</p>
+                <p class="footer-note">*Meta признана экстремистской организацией и запрещенной в России</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Loader animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const loader = document.getElementById('loader');
+            const body = document.body;
+            
+            // Simulate page load time
+            setTimeout(function() {
+                loader.style.opacity = '0';
+                loader.style.visibility = 'hidden';
+                
+                // Remove loader after animation completes
+                setTimeout(function() {
+                    loader.remove();
+                    body.style.overflow = 'auto';
+                }, 500);
+            }, 2000); // 2 seconds loading time
+            
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+            
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+            
+            // Close mobile menu when clicking on links
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                });
+            });
+            
+            // Header scroll effect
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('header');
+                if (window.scrollY > 100) {
+                    header.style.background = 'rgba(51, 51, 51, 0.98)';
+                    header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+                } else {
+                    header.style.background = 'rgba(51, 51, 51, 0.95)';
+                    header.style.boxShadow = 'none';
+                }
+            });
+            
+            // Cookie notification
+            const cookieNotification = document.getElementById('cookieNotification');
+            const cookieBtn = cookieNotification.querySelector('.cookie-btn');
+            const cookieClose = cookieNotification.querySelector('.cookie-close');
+            
+            // Check if user has already accepted cookies
+            if (localStorage.getItem('cookiesAccepted') === 'true') {
+                cookieNotification.classList.add('hidden');
+            }
+            
+            cookieBtn.addEventListener('click', () => {
+                localStorage.setItem('cookiesAccepted', 'true');
+                cookieNotification.classList.add('hidden');
+            });
+            
+            cookieClose.addEventListener('click', () => {
+                cookieNotification.classList.add('hidden');
+            });
+            
+            // Slider functionality
+            function initSlider(sliderId, prevBtnClass, nextBtnClass) {
+                const slider = document.getElementById(sliderId);
+                if (!slider) return;
+                
+                const prevBtn = slider.parentElement.querySelector(prevBtnClass);
+                const nextBtn = slider.parentElement.querySelector(nextBtnClass);
+                let isDragging = false;
+                let startPos = 0;
+                let currentTranslate = 0;
+                let prevTranslate = 0;
+                let animationID;
+                let currentIndex = 0;
+                
+                if (!prevBtn || !nextBtn) return;
+                
+                prevBtn.addEventListener('click', () => {
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                        setSliderPosition();
+                    }
+                });
+                
+                nextBtn.addEventListener('click', () => {
+                    const maxIndex = slider.children.length - 1;
+                    if (currentIndex < maxIndex) {
+                        currentIndex++;
+                        setSliderPosition();
+                    }
+                });
+                
+                function setSliderPosition() {
+                    const itemWidth = slider.children[0].offsetWidth + parseInt(getComputedStyle(slider).gap);
+                    currentTranslate = -currentIndex * itemWidth;
+                    slider.style.transform = `translateX(${currentTranslate}px)`;
+                }
+                
+                // Touch events for mobile
+                slider.addEventListener('mousedown', dragStart);
+                slider.addEventListener('touchstart', dragStart);
+                
+                slider.addEventListener('mousemove', drag);
+                slider.addEventListener('touchmove', drag);
+                
+                slider.addEventListener('mouseup', dragEnd);
+                slider.addEventListener('mouseleave', dragEnd);
+                slider.addEventListener('touchend', dragEnd);
+                
+                function dragStart(event) {
+                    isDragging = true;
+                    startPos = getPositionX(event);
+                    animationID = requestAnimationFrame(animation);
+                }
+                
+                function drag(event) {
+                    if (isDragging) {
+                        const currentPosition = getPositionX(event);
+                        currentTranslate = prevTranslate + currentPosition - startPos;
+                    }
+                }
+                
+                function dragEnd() {
+                    isDragging = false;
+                    cancelAnimationFrame(animationID);
+                    
+                    const itemWidth = slider.children[0].offsetWidth + parseInt(getComputedStyle(slider).gap);
+                    const movedBy = currentTranslate - prevTranslate;
+                    
+                    // If moved enough negative then snap to next item
+                    if (movedBy < -100 && currentIndex < slider.children.length - 1) currentIndex++;
+                    
+                    // If moved enough positive then snap to previous item
+                    if (movedBy > 100 && currentIndex > 0) currentIndex--;
+                    
+                    setSliderPosition();
+                    prevTranslate = currentTranslate;
+                }
+                
+                function animation() {
+                    if (isDragging) requestAnimationFrame(animation);
+                }
+                
+                function getPositionX(event) {
+                    return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+                }
+            }
+            
+            // Initialize sliders
+            initSlider('aboutSlider', '.slider-prev', '.slider-next');
+            initSlider('portfolioSlider', '.slider-prev', '.slider-next');
+            initSlider('reviewsSlider', '.slider-prev', '.slider-next');
+            
+            // Accordion functionality
+            document.querySelectorAll('.accordion-header').forEach(header => {
+                header.addEventListener('click', () => {
+                    const accordion = header.parentElement;
+                    const content = accordion.querySelector('.accordion-content');
+                    const icon = header.querySelector('.accordion-icon svg');
+                    
+                    accordion.classList.toggle('active');
+                    
+                    if (accordion.classList.contains('active')) {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        icon.querySelector('path:nth-child(2)').style.display = 'none';
+                    } else {
+                        content.style.maxHeight = null;
+                        icon.querySelector('path:nth-child(2)').style.display = 'block';
+                    }
+                });
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    if (targetId === '#registration') {
+                        document.getElementById('registrationPopup').style.display = 'block';
+                        return;
+                    }
+                    
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Close popup
+            const popup = document.getElementById('registrationPopup');
+            const closeBtn = popup.querySelector('.t-popup__block-close-button');
+            
+            closeBtn.addEventListener('click', () => {
+                popup.style.display = 'none';
+            });
+            
+            // Close popup when clicking outside
+            window.addEventListener('click', (e) => {
+                if (e.target === popup) {
+                    popup.style.display = 'none';
+                }
+            });
+            
+            // Form submission
+            const registrationForm = document.getElementById('registrationForm');
+            if (registrationForm) {
+                registrationForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    // Here you would typically send the form data to a server
+                    alert('Спасибо! Ваша заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.');
+                    popup.style.display = 'none';
+                    registrationForm.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
