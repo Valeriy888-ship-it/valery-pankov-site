@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Black Barber - Мужской барбершоп в Уфа</title>
+    <title>Black Barber - Мужской барбершоп в Уфе</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-color: #333333; /* graphite */
@@ -18,6 +20,114 @@
             --transition: all 0.3s ease;
         }
 
+        /* Preloader Styles */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        #preloader.fade-out {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .scissors-container {
+            text-align: center;
+        }
+
+        .scissors {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+        }
+
+        .scissors-blade {
+            position: absolute;
+            width: 40px;
+            height: 8px;
+            background: linear-gradient(90deg, #ff6b35, #ff8c00);
+            border-radius: 4px;
+            top: 46px;
+            transform-origin: right center;
+            box-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+        }
+
+        .scissors-blade.left {
+            left: 10px;
+            animation: openScissorsLeft 2s infinite;
+        }
+
+        .scissors-blade.right {
+            right: 10px;
+            animation: openScissorsRight 2s infinite;
+        }
+
+        .scissors-handle {
+            position: absolute;
+            width: 60px;
+            height: 25px;
+            background: #333;
+            border-radius: 15px 0 0 15px;
+            top: 37px;
+            left: 20px;
+        }
+
+        .scissors-handle::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 25px;
+            background: #333;
+            border-radius: 0 15px 15px 0;
+            right: -40px;
+        }
+
+        .loading-text {
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            letter-spacing: 2px;
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Scissors Animation */
+        @keyframes openScissorsLeft {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(-25deg);
+            }
+        }
+
+        @keyframes openScissorsRight {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(25deg);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -25,7 +135,7 @@
         }
 
         body {
-            font-family: 'Raleway', 'Montserrat', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             color: var(--text-color);
             line-height: 1.6;
             overflow-x: hidden;
@@ -33,7 +143,7 @@
         }
 
         h1, h2, h3, h4 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Comfortaa', cursive;
             font-weight: 700;
             margin-bottom: 1rem;
             color: var(--primary-color);
@@ -59,8 +169,6 @@
             font-size: 2.5rem;
             position: relative;
             display: inline-block;
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
         }
 
         .section-title h2::after {
@@ -89,7 +197,6 @@
             font-family: 'Montserrat', sans-serif;
             text-transform: uppercase;
             letter-spacing: 1px;
-            font-size: 16px;
         }
 
         .btn:hover {
@@ -119,75 +226,6 @@
             color: white;
         }
 
-        /* Loader with scissors animation */
-        .loader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--primary-color);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease, visibility 0.5s ease;
-        }
-
-        .scissors {
-            position: relative;
-            width: 80px;
-            height: 80px;
-        }
-
-        .scissor {
-            position: absolute;
-            width: 40px;
-            height: 8px;
-            background: var(--secondary-color);
-            border-radius: 4px;
-            transform-origin: left center;
-        }
-
-        .scissor-left {
-            top: 36px;
-            left: 0;
-            transform: rotate(-20deg);
-            animation: scissor-left 1.5s ease-in-out infinite;
-        }
-
-        .scissor-right {
-            top: 36px;
-            right: 0;
-            transform: rotate(20deg);
-            animation: scissor-right 1.5s ease-in-out infinite;
-        }
-
-        .scissors-handle {
-            position: absolute;
-            width: 12px;
-            height: 12px;
-            background: var(--secondary-color);
-            border-radius: 50%;
-            top: 30px;
-            left: 36px;
-        }
-
-        .scissors-handle-right {
-            left: auto;
-            right: 36px;
-        }
-
-        @keyframes scissor-left {
-            0%, 100% { transform: rotate(-20deg); }
-            50% { transform: rotate(5deg); }
-        }
-
-        @keyframes scissor-right {
-            0%, 100% { transform: rotate(20deg); }
-            50% { transform: rotate(-5deg); }
-        }
-
         /* Header Styles */
         header {
             position: fixed;
@@ -208,7 +246,7 @@
         }
 
         .logo {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Comfortaa', cursive;
             font-size: 28px;
             font-weight: 700;
             color: white;
@@ -233,7 +271,6 @@
             text-decoration: none;
             font-weight: 500;
             transition: var(--transition);
-            font-family: 'Raleway', sans-serif;
             font-size: 16px;
         }
 
@@ -265,75 +302,38 @@
             background: var(--secondary-color);
         }
 
-        /* Hero Section - Tilda style */
-        .t-cover {
-            position: relative;
+        /* Hero Section */
+        .hero {
             height: 100vh;
-            overflow: hidden;
-        }
-
-        .t-cover__carrier {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            background: linear-gradient(rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.8)), url('https://images.unsplash.com/photo-1597232457493-2c876cc1a2d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
-            transition: background-position 0.3s ease;
-        }
-
-        .t-cover__wrapper {
-            position: relative;
-            height: 100%;
             display: flex;
             align-items: center;
-            justify-content: center;
             text-align: center;
             color: white;
-            z-index: 2;
+            position: relative;
         }
 
-        .t-cover__filter {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 1;
-        }
-
-        .t-container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-
-        .t-cover__text {
+        .hero-content {
             max-width: 800px;
             margin: 0 auto;
             padding-top: 80px;
         }
 
-        .t-cover__title {
+        .hero h1 {
             font-size: 4rem;
             margin-bottom: 20px;
             color: white;
             text-transform: uppercase;
             letter-spacing: 2px;
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
         }
 
-        .t-cover__descr {
+        .hero p {
             font-size: 1.5rem;
             margin-bottom: 30px;
             opacity: 0.9;
             font-weight: 300;
-            font-family: 'Raleway', sans-serif;
         }
 
         /* Services Section */
@@ -373,21 +373,18 @@
             font-size: 1.8rem;
             margin-bottom: 15px;
             color: var(--primary-color);
-            font-family: 'Playfair Display', serif;
         }
 
         .service-card p {
             color: #666;
             margin-bottom: 15px;
             font-size: 16px;
-            font-family: 'Raleway', sans-serif;
         }
 
         .price {
             font-weight: 700;
             color: var(--secondary-color);
             font-size: 1.5rem;
-            font-family: 'Montserrat', sans-serif;
         }
 
         /* Masters Section */
@@ -431,7 +428,6 @@
         .master-info h3 {
             font-size: 1.8rem;
             margin-bottom: 8px;
-            font-family: 'Playfair Display', serif;
         }
 
         .master-info .specialty {
@@ -439,13 +435,6 @@
             font-weight: 600;
             margin-bottom: 15px;
             font-size: 16px;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .master-info p {
-            font-family: 'Raleway', sans-serif;
-            font-size: 16px;
-            color: #666;
         }
 
         /* Work Quality Section */
@@ -469,7 +458,6 @@
             color: white;
             text-transform: uppercase;
             letter-spacing: 2px;
-            font-family: 'Playfair Display', serif;
         }
 
         .quality-content p {
@@ -477,7 +465,6 @@
             margin-bottom: 40px;
             opacity: 0.9;
             font-weight: 300;
-            font-family: 'Raleway', sans-serif;
         }
 
         /* Gift Section */
@@ -498,14 +485,12 @@
         .gift-text h2 {
             font-size: 2.8rem;
             margin-bottom: 20px;
-            font-family: 'Playfair Display', serif;
         }
 
         .gift-text p {
             font-size: 1.1rem;
             margin-bottom: 30px;
             color: #666;
-            font-family: 'Raleway', sans-serif;
         }
 
         .gift-image {
@@ -549,13 +534,11 @@
         .result-card h3 {
             font-size: 1.8rem;
             margin-bottom: 15px;
-            font-family: 'Playfair Display', serif;
         }
 
         .result-card p {
             color: #666;
             font-size: 16px;
-            font-family: 'Raleway', sans-serif;
         }
 
         /* Trust Section */
@@ -579,7 +562,6 @@
             color: white;
             text-transform: uppercase;
             letter-spacing: 2px;
-            font-family: 'Playfair Display', serif;
         }
 
         .trust-content p {
@@ -587,7 +569,6 @@
             margin-bottom: 40px;
             opacity: 0.9;
             font-weight: 300;
-            font-family: 'Raleway', sans-serif;
         }
 
         .clients-count {
@@ -606,13 +587,11 @@
             font-weight: 700;
             color: var(--secondary-color);
             margin-bottom: 10px;
-            font-family: 'Montserrat', sans-serif;
         }
 
         .client-label {
             font-size: 1.2rem;
             opacity: 0.9;
-            font-family: 'Raleway', sans-serif;
         }
 
         /* Booking Section */
@@ -636,7 +615,6 @@
             color: white;
             text-transform: uppercase;
             letter-spacing: 2px;
-            font-family: 'Playfair Display', serif;
         }
 
         .booking-container p {
@@ -644,7 +622,6 @@
             margin-bottom: 40px;
             opacity: 0.9;
             font-weight: 300;
-            font-family: 'Raleway', sans-serif;
         }
 
         /* Contacts Section */
@@ -682,13 +659,11 @@
         .contact-card h3 {
             font-size: 1.8rem;
             margin-bottom: 20px;
-            font-family: 'Playfair Display', serif;
         }
 
         .contact-info {
             margin-bottom: 20px;
             font-size: 1.1rem;
-            font-family: 'Raleway', sans-serif;
         }
 
         .addresses-list {
@@ -702,7 +677,6 @@
             padding-left: 25px;
             position: relative;
             font-size: 16px;
-            font-family: 'Raleway', sans-serif;
         }
 
         .addresses-list li::before {
@@ -718,7 +692,6 @@
             font-size: 1.2rem;
             margin: 8px 0;
             color: var(--primary-color);
-            font-family: 'Montserrat', sans-serif;
         }
 
         .schedule {
@@ -726,7 +699,6 @@
             color: #666;
             margin-top: 15px;
             font-size: 16px;
-            font-family: 'Raleway', sans-serif;
         }
 
         /* Footer */
@@ -747,7 +719,6 @@
             font-size: 1.8rem;
             margin-bottom: 25px;
             position: relative;
-            font-family: 'Playfair Display', serif;
         }
 
         .footer-col h3::after {
@@ -773,7 +744,6 @@
             text-decoration: none;
             transition: var(--transition);
             font-size: 16px;
-            font-family: 'Raleway', sans-serif;
         }
 
         .footer-links a:hover {
@@ -786,7 +756,35 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: #aaa;
             font-size: 16px;
-            font-family: 'Raleway', sans-serif;
+        }
+
+        /* Animation classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Education link in header */
+        .education-link {
+            background: var(--accent-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            margin-left: 15px;
+        }
+
+        .education-link:hover {
+            background: #257a4a;
+            transform: translateY(-2px);
         }
 
         /* Responsive Design */
@@ -796,7 +794,7 @@
             }
             
             .gift-content {
-                grid-template-columns: 1fr;
+                flex-direction: column;
             }
             
             .gift-image {
@@ -822,11 +820,19 @@
                 box-shadow: 0 10px 20px rgba(0,0,0,0.2);
             }
 
-            .t-cover__title {
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
+            .hero h1 {
                 font-size: 2.5rem;
             }
 
-            .t-cover__descr {
+            .hero p {
                 font-size: 1.2rem;
             }
 
@@ -852,11 +858,11 @@
         }
 
         @media (max-width: 480px) {
-            .t-cover__title {
+            .hero h1 {
                 font-size: 2rem;
             }
 
-            .t-cover__descr {
+            .hero p {
                 font-size: 1rem;
             }
 
@@ -884,73 +890,19 @@
             .contact-card {
                 padding: 30px 20px;
             }
-
-            .scissors {
-                width: 60px;
-                height: 60px;
-            }
-
-            .scissor {
-                width: 30px;
-                height: 6px;
-            }
-
-            .scissors-handle {
-                width: 10px;
-                height: 10px;
-            }
-        }
-
-        /* Animation classes */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .fade-in.appear {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Education link in header */
-        .education-link {
-            background: var(--accent-color);
-            color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: var(--transition);
-            margin-left: 15px;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .education-link:hover {
-            background: #257a4a;
-            transform: translateY(-2px);
-        }
-
-        /* Tilda style parallax effect */
-        .t-cover__carrier {
-            background-attachment: fixed;
-        }
-
-        @media (max-width: 768px) {
-            .t-cover__carrier {
-                background-attachment: scroll;
-            }
         }
     </style>
 </head>
 <body>
-    <!-- Loader with scissors animation -->
-    <div class="loader" id="loader">
-        <div class="scissors">
-            <div class="scissor scissor-left"></div>
-            <div class="scissor scissor-right"></div>
-            <div class="scissors-handle"></div>
-            <div class="scissors-handle scissors-handle-right"></div>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="scissors-container">
+            <div class="scissors">
+                <div class="scissors-blade left"></div>
+                <div class="scissors-blade right"></div>
+                <div class="scissors-handle"></div>
+            </div>
+            <div class="loading-text">Loading...</div>
         </div>
     </div>
 
@@ -973,19 +925,12 @@
         </div>
     </header>
 
-    <!-- Hero Section - Tilda style -->
-    <section class="t-cover" id="home">
-        <div class="t-cover__carrier loaded" id="coverCarry1678853051" data-content-cover-id="1678853051" data-content-cover-bg="https://images.unsplash.com/photo-1597232457493-2c876cc1a2d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80" data-display-changed="true" data-content-cover-height="100vh" data-content-cover-parallax="dynamic" style="background-image: url('https://images.unsplash.com/photo-1597232457493-2c876cc1a2d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');">
-            <div class="t-cover__filter"></div>
-        </div>
-        <div class="t-cover__wrapper">
-            <div class="t-container">
-                <div class="t-cover__text">
-                    <h1 class="t-cover__title">Стиль Black Ufa</h1>
-                    <div class="t-cover__descr">Стрижки, которые подчеркивают характер</div>
-                    <a href="#booking" class="btn btn-secondary">Записаться онлайн</a>
-                </div>
-            </div>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h1>Стиль Black Ufa</h1>
+            <p>Стрижки, которые подчеркивают характер</p>
+            <a href="#booking" class="btn btn-secondary">Записаться онлайн</a>
         </div>
     </section>
 
@@ -1229,102 +1174,98 @@
     </footer>
 
     <script>
-        // Loader animation
-        document.addEventListener('DOMContentLoaded', function() {
-            const loader = document.getElementById('loader');
+        // Preloader
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
             
-            // Simulate page load time
-            setTimeout(function() {
-                loader.style.opacity = '0';
-                loader.style.visibility = 'hidden';
+            // Ждем 1.5 секунды перед исчезновением прелоадера
+            setTimeout(() => {
+                preloader.classList.add('fade-out');
                 
-                // Remove loader after animation completes
-                setTimeout(function() {
-                    loader.remove();
+                // Удаляем прелоадер из DOM после анимации
+                setTimeout(() => {
+                    preloader.style.display = 'none';
                 }, 500);
-            }, 2000); // 2 seconds loading time
-            
-            // Mobile menu toggle
-            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-            const navLinks = document.getElementById('navLinks');
+            }, 1500);
+        });
 
-            mobileMenuBtn.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-                mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
-                    '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        // Если страница уже загружена (из кэша)
+        if (document.readyState === 'complete') {
+            document.getElementById('preloader').style.display = 'none';
+        }
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
             });
+        });
 
-            // Close mobile menu when clicking on links
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navLinks.classList.remove('active');
-                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                });
-            });
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(51, 51, 51, 0.98)';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.background = 'rgba(51, 51, 51, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        });
 
-            // Header scroll effect
-            window.addEventListener('scroll', () => {
-                const header = document.querySelector('header');
-                if (window.scrollY > 100) {
-                    header.style.background = 'rgba(51, 51, 51, 0.98)';
-                    header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-                } else {
-                    header.style.background = 'rgba(51, 51, 51, 0.95)';
-                    header.style.boxShadow = 'none';
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const target = document.querySelector(targetId);
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
                 }
             });
+        });
 
-            // Tilda-style parallax effect
-            const coverCarrier = document.querySelector('.t-cover__carrier');
-            window.addEventListener('scroll', () => {
-                if (window.innerWidth > 768) {
-                    const scrollPosition = window.scrollY;
-                    const maxScroll = 500; // Maximum scroll for parallax effect
-                    const scrollRatio = Math.min(scrollPosition / maxScroll, 1);
-                    coverCarrier.style.backgroundPosition = `center ${scrollRatio * 50}px`;
+        // Fade-in animation on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('appear');
+                    observer.unobserve(entry.target);
                 }
             });
+        }, observerOptions);
 
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
-                    const target = document.querySelector(targetId);
-                    if (target) {
-                        window.scrollTo({
-                            top: target.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
+        fadeElements.forEach(element => {
+            observer.observe(element);
+        });
 
-            // Fade-in animation on scroll
-            const fadeElements = document.querySelectorAll('.fade-in');
-
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.1
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('appear');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-
-            fadeElements.forEach(element => {
-                observer.observe(element);
-            });
-
-            // Initialize animations on page load
+        // Initialize animations on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Check if elements are already in viewport on load
             fadeElements.forEach(element => {
                 const rect = element.getBoundingClientRect();
                 if (rect.top < window.innerHeight && rect.bottom > 0) {
