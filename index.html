@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Black Barber - Мужской барбершоп в Уфе</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barbershop Black Ufa — мужские и детские стрижки в Уфе</title>
+    <meta name="description" content="Мужские и детские стрижки, борода, фейд и классика в Barbershop Black Ufa. Сильные мастера, честный прайс и удобная онлайн-запись." />
+    <meta name="keywords" content="барбершоп Уфа, мужские стрижки, детские стрижки" />
+    <meta property="og:url" content="https://blackbarberufa.ru" />
+    <meta property="og:title" content="Barbershop Black Ufa — мужские и детские стрижки в Уфе" />
+    <meta property="og:description" content="Мужские и детские стрижки, борода, фейд и классика в Barbershop Black Ufa. Сильные мастера, честный прайс и удобная онлайн-запись." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://static.tildacdn.com/tild3937-6437-4632-b438-316566656464/photo_2025-12-15_163.jpeg" />
+    <link rel="canonical" href="https://blackbarberufa.ru">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="dns-prefetch" href="https://ws.tildacdn.com">
+    <link rel="dns-prefetch" href="https://static.tildacdn.com">
+    <link rel="shortcut icon" href="https://static.tildacdn.com/tild6630-3834-4336-b939-303064316565/IMG_5373_1.svg" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&subset=latin,cyrillic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=SouthGhetto:wght@400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-color: #333333; /* graphite */
@@ -16,116 +29,12 @@
             --text-color: #333;
             --light-color: #f8f8f8;
             --dark-color: #222;
+            --gray-color: #8d8d8d;
+            --light-gray: #d6d6d6;
+            --dark-bg: #060606;
+            --card-bg: #262626;
             --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s ease;
-        }
-
-        /* Preloader Styles */
-        #preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease, visibility 0.5s ease;
-        }
-
-        #preloader.fade-out {
-            opacity: 0;
-            visibility: hidden;
-        }
-
-        .scissors-container {
-            text-align: center;
-        }
-
-        .scissors {
-            position: relative;
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 20px;
-        }
-
-        .scissors-blade {
-            position: absolute;
-            width: 40px;
-            height: 8px;
-            background: linear-gradient(90deg, #ff6b35, #ff8c00);
-            border-radius: 4px;
-            top: 46px;
-            transform-origin: right center;
-            box-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
-        }
-
-        .scissors-blade.left {
-            left: 10px;
-            animation: openScissorsLeft 2s infinite;
-        }
-
-        .scissors-blade.right {
-            right: 10px;
-            animation: openScissorsRight 2s infinite;
-        }
-
-        .scissors-handle {
-            position: absolute;
-            width: 60px;
-            height: 25px;
-            background: #333;
-            border-radius: 15px 0 0 15px;
-            top: 37px;
-            left: 20px;
-        }
-
-        .scissors-handle::after {
-            content: '';
-            position: absolute;
-            width: 60px;
-            height: 25px;
-            background: #333;
-            border-radius: 0 15px 15px 0;
-            right: -40px;
-        }
-
-        .loading-text {
-            color: white;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 18px;
-            letter-spacing: 2px;
-            animation: pulse 1.5s infinite;
-        }
-
-        /* Scissors Animation */
-        @keyframes openScissorsLeft {
-            0%, 100% {
-                transform: rotate(0deg);
-            }
-            50% {
-                transform: rotate(-25deg);
-            }
-        }
-
-        @keyframes openScissorsRight {
-            0%, 100% {
-                transform: rotate(0deg);
-            }
-            50% {
-                transform: rotate(25deg);
-            }
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.5;
-            }
         }
 
         * {
@@ -135,18 +44,19 @@
         }
 
         body {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            color: var(--light-gray);
             line-height: 1.6;
             overflow-x: hidden;
-            background-color: white;
+            background-color: var(--dark-bg);
+            position: relative;
         }
 
         h1, h2, h3, h4 {
-            font-family: 'Comfortaa', cursive;
-            font-weight: 700;
+            font-family: 'SouthGhetto', serif;
+            font-weight: 400;
             margin-bottom: 1rem;
-            color: var(--primary-color);
+            color: white;
         }
 
         .container {
@@ -154,6 +64,77 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 15px;
+        }
+
+        .t-section__container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+
+        .t-col {
+            padding: 0 15px;
+            width: 100%;
+        }
+
+        @media (min-width: 960px) {
+            .t-col_1 { width: 8.33333%; }
+            .t-col_2 { width: 16.66667%; }
+            .t-col_3 { width: 25%; }
+            .t-col_4 { width: 33.33333%; }
+            .t-col_5 { width: 41.66667%; }
+            .t-col_6 { width: 50%; }
+            .t-col_7 { width: 58.33333%; }
+            .t-col_8 { width: 66.66667%; }
+            .t-col_9 { width: 75%; }
+            .t-col_10 { width: 83.33333%; }
+            .t-col_11 { width: 91.66667%; }
+            .t-col_12 { width: 100%; }
+        }
+
+        @media (min-width: 640px) {
+            .t-col_640_1 { width: 8.33333%; }
+            .t-col_640_2 { width: 16.66667%; }
+            .t-col_640_3 { width: 25%; }
+            .t-col_640_4 { width: 33.33333%; }
+            .t-col_640_5 { width: 41.66667%; }
+            .t-col_640_6 { width: 50%; }
+            .t-col_640_7 { width: 58.33333%; }
+            .t-col_640_8 { width: 66.66667%; }
+            .t-col_640_9 { width: 75%; }
+            .t-col_640_10 { width: 83.33333%; }
+            .t-col_640_11 { width: 91.66667%; }
+            .t-col_640_12 { width: 100%; }
+        }
+
+        @media (min-width: 480px) {
+            .t-col_480_1 { width: 8.33333%; }
+            .t-col_480_2 { width: 16.66667%; }
+            .t-col_480_3 { width: 25%; }
+            .t-col_480_4 { width: 33.33333%; }
+            .t-col_480_5 { width: 41.66667%; }
+            .t-col_480_6 { width: 50%; }
+            .t-col_480_7 { width: 58.33333%; }
+            .t-col_480_8 { width: 66.66667%; }
+            .t-col_480_9 { width: 75%; }
+            .t-col_480_10 { width: 83.33333%; }
+            .t-col_480_11 { width: 91.66667%; }
+            .t-col_480_12 { width: 100%; }
+        }
+
+        @media (min-width: 320px) {
+            .t-col_320_1 { width: 8.33333%; }
+            .t-col_320_2 { width: 16.66667%; }
+            .t-col_320_3 { width: 25%; }
+            .t-col_320_4 { width: 33.33333%; }
+            .t-col_320_5 { width: 41.66667%; }
+            .t-col_320_6 { width: 50%; }
+            .t-col_320_7 { width: 58.33333%; }
+            .t-col_320_8 { width: 66.66667%; }
+            .t-col_320_9 { width: 75%; }
+            .t-col_320_10 { width: 83.33333%; }
+            .t-col_320_11 { width: 91.66667%; }
+            .t-col_320_12 { width: 100%; }
         }
 
         .section {
@@ -166,7 +147,7 @@
         }
 
         .section-title h2 {
-            font-size: 2.5rem;
+            font-size: 38px;
             position: relative;
             display: inline-block;
         }
@@ -186,17 +167,19 @@
             display: inline-block;
             background: var(--primary-color);
             color: white;
-            padding: 12px 30px;
+            padding: 16px 40px 12px;
             border: none;
-            border-radius: 30px;
+            border-radius: 100px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 400;
             cursor: pointer;
             transition: var(--transition);
             text-align: center;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'SouthGhetto', sans-serif;
             text-transform: uppercase;
             letter-spacing: 1px;
+            font-size: 16px;
+            line-height: 1.45;
         }
 
         .btn:hover {
@@ -226,6 +209,17 @@
             color: white;
         }
 
+        .btn-outline {
+            color: white;
+            border: 1px solid white;
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+
         /* Header Styles */
         header {
             position: fixed;
@@ -233,10 +227,9 @@
             left: 0;
             width: 100%;
             background: rgba(51, 51, 51, 0.95);
-            backdrop-filter: blur(10px);
             z-index: 1000;
-            transition: var(--transition);
             padding: 15px 0;
+            transition: var(--transition);
         }
 
         .header-container {
@@ -246,7 +239,7 @@
         }
 
         .logo {
-            font-family: 'Comfortaa', cursive;
+            font-family: 'SouthGhetto', serif;
             font-size: 28px;
             font-weight: 700;
             color: white;
@@ -272,6 +265,7 @@
             font-weight: 500;
             transition: var(--transition);
             font-size: 16px;
+            font-family: 'Inter', sans-serif;
         }
 
         .nav-links a:hover {
@@ -302,198 +296,407 @@
             background: var(--secondary-color);
         }
 
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.8)), url('https://images.unsplash.com/photo-1597232457493-2c876cc1a2d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
-            background-size: cover;
-            background-position: center;
+        /* Loader with scissors animation */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-color);
             display: flex;
+            justify-content: center;
             align-items: center;
-            text-align: center;
-            color: white;
-            position: relative;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
         }
 
-        .hero-content {
+        .scissors {
+            position: relative;
+            width: 80px;
+            height: 80px;
+        }
+
+        .scissor {
+            position: absolute;
+            width: 40px;
+            height: 8px;
+            background: var(--secondary-color);
+            border-radius: 4px;
+            transform-origin: left center;
+        }
+
+        .scissor-left {
+            top: 36px;
+            left: 0;
+            transform: rotate(-20deg);
+            animation: scissor-left 1.5s ease-in-out infinite;
+        }
+
+        .scissor-right {
+            top: 36px;
+            right: 0;
+            transform: rotate(20deg);
+            animation: scissor-right 1.5s ease-in-out infinite;
+        }
+
+        .scissors-handle {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: var(--secondary-color);
+            border-radius: 50%;
+            top: 30px;
+            left: 36px;
+        }
+
+        .scissors-handle-right {
+            left: auto;
+            right: 36px;
+        }
+
+        @keyframes scissor-left {
+            0%, 100% { transform: rotate(-20deg); }
+            50% { transform: rotate(5deg); }
+        }
+
+        @keyframes scissor-right {
+            0%, 100% { transform: rotate(20deg); }
+            50% { transform: rotate(-5deg); }
+        }
+
+        /* Hero Section - Tilda style */
+        .t-cover {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .t-cover__carrier {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            transition: background-position 0.3s ease;
+        }
+
+        .t-cover__filter {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to bottom, rgba(6,6,6,0.50), rgba(6,6,6,0.50));
+        }
+
+        .t-cover__wrapper {
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            z-index: 2;
+        }
+
+        .t-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .t-cover__text {
             max-width: 800px;
             margin: 0 auto;
             padding-top: 80px;
         }
 
-        .hero h1 {
-            font-size: 4rem;
+        .t-cover__title {
+            font-size: 48px;
             margin-bottom: 20px;
             color: white;
             text-transform: uppercase;
             letter-spacing: 2px;
+            font-family: 'SouthGhetto', serif;
+            font-weight: 400;
         }
 
-        .hero p {
-            font-size: 1.5rem;
+        .t-cover__descr {
+            font-size: 18px;
             margin-bottom: 30px;
             opacity: 0.9;
             font-weight: 300;
+            font-family: 'Inter', sans-serif;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .t182__buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* Masters Section */
+        .masters-section {
+            background-color: var(--dark-bg);
+        }
+
+        .section-number {
+            font-size: 12px;
+            line-height: 1;
+            padding-bottom: 10px;
+            font-weight: 400;
+            color: var(--gray-color);
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0px;
+        }
+
+        .section-header {
+            margin-bottom: 40px;
+        }
+
+        .section-header p {
+            font-size: 16px;
+            line-height: 1.5;
+            max-width: 600px;
+            padding-top: 10px;
+            font-weight: 400;
+            color: var(--light-gray);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .slider-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 40px 0;
+        }
+
+        .slider-button {
+            width: 40px;
+            height: 40px;
+            border-radius: 100px;
+            background-color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .slider-button:hover {
+            background-color: #e65a2a;
+            transform: scale(1.1);
+        }
+
+        .slider-button svg {
+            stroke: var(--primary-color);
+            stroke-width: 2px;
+            width: 20px;
+            height: 20px;
+        }
+
+        .scroll-icon {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            mix-blend-mode: lighten;
+        }
+
+        .masters-slider {
+            display: flex;
+            gap: 40px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding-bottom: 20px;
+            scrollbar-width: none; /* Firefox */
+        }
+
+        .masters-slider::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
+
+        .master-card {
+            min-width: 380px;
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .master-images {
+            position: relative;
+            height: 380px;
+        }
+
+        .master-img-first, .master-img-second {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: opacity 0.5s ease;
+        }
+
+        .master-img-second {
+            opacity: 0;
+        }
+
+        .master-card:hover .master-img-second {
+            opacity: 1;
+        }
+
+        .master-content {
+            padding: 20px;
+            color: white;
+        }
+
+        .master-title {
+            font-size: 22px;
+            line-height: 1.2;
+            font-weight: 400;
+            color: white;
+            font-family: 'SouthGhetto', serif;
+            margin-bottom: 8px;
+        }
+
+        .master-subtitle {
+            font-size: 12px;
+            line-height: 1;
+            letter-spacing: 0px;
+            font-weight: 400;
+            color: var(--gray-color);
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 15px;
+        }
+
+        .master-desc {
+            font-size: 16px;
+            line-height: 1.5;
+            font-weight: 400;
+            color: var(--light-gray);
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 20px;
         }
 
         /* Services Section */
-        .services {
-            background-color: white;
+        .services-section {
+            background-color: var(--dark-bg);
+            text-align: center;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
         }
 
         .service-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px;
             text-align: center;
-            padding: 30px 20px;
-            border: 2px solid transparent;
+            transition: var(--transition);
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--secondary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
-        .service-icon {
-            font-size: 3.5rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-
-        .service-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-            color: var(--primary-color);
-        }
-
-        .service-card p {
-            color: #666;
-            margin-bottom: 15px;
-            font-size: 16px;
-        }
-
-        .price {
-            font-weight: 700;
-            color: var(--secondary-color);
-            font-size: 1.5rem;
-        }
-
-        /* Masters Section */
-        .masters {
-            background-color: #f9f9f9;
-        }
-
-        .masters-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .master-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            text-align: center;
-            transition: var(--transition);
-        }
-
-        .master-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .master-img {
-            height: 300px;
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .service-title {
+            font-size: 22px;
+            line-height: 1.2;
+            font-weight: 400;
             color: white;
-            font-size: 4rem;
-        }
-
-        .master-info {
-            padding: 25px;
-        }
-
-        .master-info h3 {
-            font-size: 1.8rem;
+            font-family: 'SouthGhetto', serif;
             margin-bottom: 8px;
         }
 
-        .master-info .specialty {
-            color: var(--secondary-color);
-            font-weight: 600;
-            margin-bottom: 15px;
+        .service-subtitle {
             font-size: 16px;
+            line-height: 1.5;
+            padding-bottom: 0px;
+            font-weight: 400;
+            color: var(--light-gray);
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 10px;
         }
 
-        /* Work Quality Section */
-        .work-quality {
-            background: linear-gradient(rgba(51, 51, 51, 0.9), rgba(51, 51, 51, 0.9)), url('https://images.unsplash.com/photo-1507035895480-2b3971c96d26?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+        .service-desc {
+            font-size: 16px;
+            line-height: 1.5;
+            font-weight: 400;
+            color: var(--light-gray);
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .service-price {
+            font-size: 22px;
+            line-height: 1.2;
+            padding-top: 10px;
+            font-weight: 400;
+            color: white;
+            font-family: 'SouthGhetto', serif;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .service-duration {
+            font-size: 14px;
+            color: var(--gray-color);
+            font-family: 'Inter', sans-serif;
+            margin-top: 5px;
+            display: block;
+        }
+
+        /* Certificate Section */
+        .certificate-section {
+            background: linear-gradient(rgba(6, 6, 6, 0.9), rgba(6, 6, 6, 0.9)), url('https://thb.tildacdn.com/tild3030-6532-4734-a336-396365323536/-/empty/2025-12-12_185156.jpg');
             background-size: cover;
             background-position: center;
             color: white;
-            text-align: center;
+            padding: 100px 0;
         }
 
-        .quality-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 80px 30px;
-        }
-
-        .quality-content h2 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            color: white;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .quality-content p {
-            font-size: 1.4rem;
-            margin-bottom: 40px;
-            opacity: 0.9;
-            font-weight: 300;
-        }
-
-        /* Gift Section */
-        .gift-section {
-            background-color: white;
-        }
-
-        .gift-content {
+        .certificate-content {
             display: flex;
             align-items: center;
             gap: 50px;
         }
 
-        .gift-text {
+        .certificate-text {
             flex: 1;
         }
 
-        .gift-text h2 {
+        .certificate-text h2 {
             font-size: 2.8rem;
             margin-bottom: 20px;
+            font-family: 'SouthGhetto', serif;
         }
 
-        .gift-text p {
+        .certificate-text p {
             font-size: 1.1rem;
             margin-bottom: 30px;
             color: #666;
+            font-family: 'Inter', sans-serif;
         }
 
-        .gift-image {
+        .certificate-image {
             flex: 1;
             height: 400px;
             background: linear-gradient(45deg, var(--secondary-color), #e65a2a);
@@ -503,222 +706,307 @@
             justify-content: center;
             font-size: 5rem;
             color: white;
-        }
-
-        /* Results Section */
-        .results {
-            background-color: #f9f9f9;
-        }
-
-        .results-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .result-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            text-align: center;
-            padding: 30px;
-        }
-
-        .result-icon {
-            font-size: 3.5rem;
-            color: var(--secondary-color);
-            margin-bottom: 20px;
-        }
-
-        .result-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-        }
-
-        .result-card p {
-            color: #666;
-            font-size: 16px;
-        }
-
-        /* Trust Section */
-        .trust-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background-image: url('https://thb.tildacdn.com/tild3030-6532-4734-a336-396365323536/-/empty/2025-12-12_185156.jpg');
             background-size: cover;
             background-position: center;
-            color: white;
-            text-align: center;
         }
 
-        .trust-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 80px 30px;
+        /* Portfolio Section */
+        .portfolio-section {
+            background-color: var(--dark-bg);
+            padding: 100px 0;
         }
 
-        .trust-content h2 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            color: white;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .trust-content p {
-            font-size: 1.4rem;
-            margin-bottom: 40px;
-            opacity: 0.9;
-            font-weight: 300;
-        }
-
-        .clients-count {
+        .portfolio-slider {
             display: flex;
+            gap: 40px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding-bottom: 40px;
+            scrollbar-width: none; /* Firefox */
+        }
+
+        .portfolio-slider::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
+
+        .portfolio-item {
+            min-width: 470px;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 470px;
+            object-fit: cover;
+            display: block;
+            transition: opacity 0.3s ease;
+        }
+
+        .portfolio-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 470px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .portfolio-item:hover .portfolio-video {
+            opacity: 1;
+        }
+
+        .portfolio-play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
             justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .portfolio-item:hover .portfolio-play {
+            opacity: 1;
+        }
+
+        .portfolio-play svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+
+        /* Education Section */
+        .education-section {
+            background-color: var(--dark-bg);
+            padding: 100px 0;
+        }
+
+        .education-content {
+            display: flex;
+            align-items: flex-start;
             gap: 50px;
-            margin-top: 30px;
         }
 
-        .client-item {
-            text-align: center;
+        .education-text {
+            flex: 1;
         }
 
-        .client-number {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: var(--secondary-color);
+        .education-text h2 {
+            font-size: 38px;
+            line-height: 1.1;
+            font-weight: 400;
+            color: white;
+            font-family: 'SouthGhetto', serif;
             margin-bottom: 10px;
         }
 
-        .client-label {
-            font-size: 1.2rem;
-            opacity: 0.9;
+        .education-text p {
+            font-size: 16px;
+            line-height: 1.5;
+            font-weight: 400;
+            color: var(--light-gray);
+            font-family: 'Inter', sans-serif;
+            max-width: 360px;
         }
 
-        /* Booking Section */
-        .booking-section {
-            background: linear-gradient(rgba(51, 51, 51, 0.95), rgba(51, 51, 51, 0.95)), url('https://images.unsplash.com/photo-1507035895480-2b3971c96d26?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
-            background-size: cover;
-            background-position: center;
+        .education-features {
+            flex: 1;
+        }
+
+        .education-feature {
+            display: flex;
+            margin-top: 40px;
+        }
+
+        .feature-icon {
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            margin-right: 15px;
+        }
+
+        .feature-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .feature-text h3 {
+            font-size: 22px;
+            line-height: 1.2;
+            padding-bottom: 0px;
+            font-weight: 400;
             color: white;
-            text-align: center;
+            font-family: 'SouthGhetto', serif;
+            margin-bottom: 5px;
         }
 
-        .booking-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 80px 30px;
+        .feature-text p {
+            font-size: 16px;
+            line-height: 1.5;
+            font-weight: 400;
+            color: var(--light-gray);
+            font-family: 'Inter', sans-serif;
         }
 
-        .booking-container h2 {
-            font-size: 3.5rem;
+        /* Reviews Section */
+        .reviews-section {
+            background-color: var(--dark-bg);
+            padding: 100px 0;
+        }
+
+        .reviews-slider {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding-bottom: 40px;
+            scrollbar-width: none; /* Firefox */
+        }
+
+        .reviews-slider::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
+
+        .review-card {
+            min-width: 380px;
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
             margin-bottom: 20px;
-            color: white;
-            text-transform: uppercase;
-            letter-spacing: 2px;
         }
 
-        .booking-container p {
-            font-size: 1.4rem;
-            margin-bottom: 40px;
-            opacity: 0.9;
-            font-weight: 300;
+        .review-title {
+            font-size: 22px;
+            line-height: 1.2;
+            font-weight: 400;
+            color: white;
+            font-family: 'SouthGhetto', serif;
+            margin-bottom: 5px;
+        }
+
+        .review-service {
+            font-size: 12px;
+            line-height: 1;
+            padding-bottom: 0px;
+            font-weight: 400;
+            color: var(--gray-color);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .review-text {
+            font-size: 16px;
+            line-height: 1.5;
+            padding-top: 0px;
+            font-weight: 400;
+            color: var(--light-gray);
+            font-family: 'Inter', sans-serif;
         }
 
         /* Contacts Section */
-        .contacts {
-            background-color: white;
+        .contacts-section {
+            background-color: var(--dark-bg);
+            padding: 100px 0;
         }
 
-        .contacts-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
+        .contacts-content {
+            display: flex;
+            gap: 50px;
         }
 
-        .contact-card {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            text-align: center;
-            transition: var(--transition);
-            border: 2px solid #eee;
+        .contacts-info {
+            flex: 1;
         }
 
-        .contact-card:hover {
-            border-color: var(--secondary-color);
-            transform: scale(1.05);
-        }
-
-        .contact-icon {
-            font-size: 3.5rem;
-            color: var(--secondary-color);
-            margin-bottom: 25px;
-        }
-
-        .contact-card h3 {
-            font-size: 1.8rem;
+        .contacts-title {
+            font-size: 38px;
+            line-height: 1.1;
+            font-weight: 400;
+            color: white;
+            font-family: 'SouthGhetto', serif;
             margin-bottom: 20px;
         }
 
-        .contact-info {
+        .contacts-text {
+            font-size: 28px;
+            line-height: 1.2;
+            font-weight: 400;
+            color: white;
+            font-family: 'SouthGhetto', serif;
             margin-bottom: 20px;
-            font-size: 1.1rem;
         }
 
-        .addresses-list {
-            list-style: none;
-            text-align: left;
-            margin-top: 15px;
+        .contacts-address {
+            font-size: 14px;
+            color: var(--gray-color);
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 20px;
         }
 
-        .addresses-list li {
-            margin-bottom: 12px;
-            padding-left: 25px;
-            position: relative;
-            font-size: 16px;
+        .social-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
         }
 
-        .addresses-list li::before {
-            content: '📍';
-            position: absolute;
-            left: 0;
-            top: 2px;
+        .social-icon {
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .phone-number {
-            display: block;
-            font-weight: 600;
-            font-size: 1.2rem;
-            margin: 8px 0;
-            color: var(--primary-color);
+        .social-icon svg {
+            width: 100%;
+            height: 100%;
+            fill: var(--secondary-color);
         }
 
-        .schedule {
-            font-style: italic;
-            color: #666;
-            margin-top: 15px;
-            font-size: 16px;
+        .contacts-map {
+            flex: 1;
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
         }
 
         /* Footer */
         footer {
-            background: var(--primary-color);
+            background: var(--card-bg);
             color: white;
             padding: 60px 0 30px;
         }
 
         .footer-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 40px;
             margin-bottom: 40px;
         }
 
         .footer-col h3 {
-            font-size: 1.8rem;
+            font-size: 18px;
             margin-bottom: 25px;
             position: relative;
+            font-family: 'SouthGhetto', serif;
         }
 
         .footer-col h3::after {
@@ -744,6 +1032,7 @@
             text-decoration: none;
             transition: var(--transition);
             font-size: 16px;
+            font-family: 'Inter', sans-serif;
         }
 
         .footer-links a:hover {
@@ -756,53 +1045,35 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: #aaa;
             font-size: 16px;
+            font-family: 'Inter', sans-serif;
         }
 
-        /* Animation classes */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .fade-in.appear {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Education link in header */
-        .education-link {
-            background: var(--accent-color);
-            color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: var(--transition);
-            margin-left: 15px;
-        }
-
-        .education-link:hover {
-            background: #257a4a;
-            transform: translateY(-2px);
+        .footer-note {
+            font-size: 10px;
+            line-height: 1;
+            font-weight: 400;
+            color: #555555;
+            font-family: 'Inter', sans-serif;
+            margin-top: 10px;
         }
 
         /* Responsive Design */
-        @media (max-width: 992px) {
-            .hero h1 {
-                font-size: 3.2rem;
-            }
-            
-            .gift-content {
+        @media (max-width: 1199px) {
+            .certificate-content,
+            .contacts-content {
                 flex-direction: column;
             }
             
-            .gift-image {
+            .certificate-image {
                 height: 300px;
+            }
+            
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 959px) {
             .mobile-menu-btn {
                 display: block;
             }
@@ -828,11 +1099,22 @@
                 margin: 15px 0;
             }
 
-            .hero h1 {
+            .slider-controls {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .t-cover__title {
+                font-size: 3.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .t-cover__title {
                 font-size: 2.5rem;
             }
 
-            .hero p {
+            .t-cover__descr {
                 font-size: 1.2rem;
             }
 
@@ -844,25 +1126,41 @@
                 font-size: 2rem;
             }
 
-            .quality-content h2,
-            .trust-content h2,
-            .booking-container h2 {
-                font-size: 2.5rem;
+            .masters-slider,
+            .portfolio-slider,
+            .reviews-slider {
+                gap: 20px;
             }
 
-            .quality-content p,
-            .trust-content p,
-            .booking-container p {
-                font-size: 1.1rem;
+            .master-card {
+                min-width: 280px;
+            }
+
+            .portfolio-item {
+                min-width: 350px;
+                height: auto;
+            }
+
+            .portfolio-item img,
+            .portfolio-video {
+                height: 350px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .education-content {
+                flex-direction: column;
             }
         }
 
         @media (max-width: 480px) {
-            .hero h1 {
+            .t-cover__title {
                 font-size: 2rem;
             }
 
-            .hero p {
+            .t-cover__descr {
                 font-size: 1rem;
             }
 
@@ -875,35 +1173,155 @@
                 font-size: 0.9rem;
             }
 
-            .client-number {
-                font-size: 2.5rem;
+            .services-grid {
+                grid-template-columns: 1fr;
             }
 
-            .client-label {
-                font-size: 1rem;
+            .masters-slider,
+            .portfolio-slider,
+            .reviews-slider {
+                gap: 10px;
             }
 
-            .gift-text h2 {
-                font-size: 2.2rem;
+            .master-card {
+                min-width: 240px;
             }
 
-            .contact-card {
-                padding: 30px 20px;
+            .portfolio-item {
+                min-width: 280px;
             }
+
+            .portfolio-item img,
+            .portfolio-video {
+                height: 280px;
+            }
+
+            .review-card {
+                min-width: 280px;
+            }
+
+            .slider-button {
+                width: 30px;
+                height: 30px;
+            }
+
+            .slider-button svg {
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        /* Cookie notification */
+        .cookie-notification {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 15px 25px;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            max-width: 90%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .cookie-notification.hidden {
+            opacity: 0;
+            transform: translateX(-50%) translateY(20px);
+            pointer-events: none;
+        }
+
+        .cookie-text {
+            font-size: 12px;
+            line-height: 1.5;
+            font-weight: 400;
+            color: var(--light-gray);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .cookie-text a {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+
+        .cookie-btn {
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            border: none;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .cookie-btn:hover {
+            background: #e65a2a;
+        }
+
+        .cookie-close {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+            margin-left: 10px;
+        }
+
+        /* Animation classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Education link in header */
+        .education-link {
+            background: var(--accent-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            margin-left: 15px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .education-link:hover {
+            background: #257a4a;
+            transform: translateY(-2px);
         }
     </style>
 </head>
 <body>
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="scissors-container">
-            <div class="scissors">
-                <div class="scissors-blade left"></div>
-                <div class="scissors-blade right"></div>
-                <div class="scissors-handle"></div>
-            </div>
-            <div class="loading-text">Loading...</div>
+    <!-- Loader with scissors animation -->
+    <div class="loader" id="loader">
+        <div class="scissors">
+            <div class="scissor scissor-left"></div>
+            <div class="scissor scissor-right"></div>
+            <div class="scissors-handle"></div>
+            <div class="scissors-handle scissors-handle-right"></div>
         </div>
+    </div>
+
+    <!-- Cookie notification -->
+    <div class="cookie-notification" id="cookieNotification">
+        <div class="cookie-text">
+            Caйт иcпoльзуeт cookie-фaйлы, чтoбы cдeлaть вaшe пpeбывaниe нa нeм мaкcимaльнo удoбным. Ocтaвaяcь нa caйтe, вы дaётe cвoe <a href="/agreement" target="_blank" rel="noreferrer noopener">coглacиe нa иcпoльзoвaниe cookie-фaйлoв</a>.
+        </div>
+        <button class="cookie-btn">Ок, не показывать</button>
+        <button class="cookie-close" aria-label="Закрыть уведомление">×</button>
     </div>
 
     <!-- Header -->
@@ -914,11 +1332,12 @@
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="active">Главная</a></li>
+                <li><a href="#masters" class="active">Мастера</a></li>
                 <li><a href="#services">Услуги</a></li>
-                <li><a href="#masters">Мастера</a></li>
-                <li><a href="#work">О нас</a></li>
-                <li><a href="#booking">Запись</a></li>
+                <li><a href="#certificate">Сертификат</a></li>
+                <li><a href="#portfolio">Портфолио</a></li>
+                <li><a href="#education">Обучение</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
                 <li><a href="#contacts">Контакты</a></li>
                 <li><a href="education.html" class="education-link">Обучение</a></li>
             </ul>
@@ -926,234 +1345,433 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container hero-content">
-            <h1>Стиль Black Ufa</h1>
-            <p>Стрижки, которые подчеркивают характер</p>
-            <a href="#booking" class="btn btn-secondary">Записаться онлайн</a>
+    <section class="t-cover" id="home">
+        <div class="t-cover__carrier" id="coverCarry1678853051"
+            data-content-cover-id="1678853051"
+            data-content-cover-bg="https://static.tildacdn.com/tild6231-6230-4264-a631-393038636566/photo.jpg"
+            data-display-changed="true"
+            data-content-cover-height="100vh"
+            data-content-cover-parallax="dynamic"
+            style="background-image: url('https://images.unsplash.com/photo-1597232457493-2c876cc1a2d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
         </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="section services" id="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>Наши услуги</h2>
-            </div>
-            <div class="services-grid">
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-cut"></i>
+        <div class="t-cover__filter"></div>
+        <div class="t-container">
+            <div class="t-width t-width_10" style="margin:0 auto;">
+                <div class="t-cover__wrapper" style="height:100vh; position: relative;z-index:1;">
+                    <div class="t182">
+                        <div class="t182__wrapper">
+                            <div class="t182__content-wrapper">
+                                <h1 class="t-cover__title">Стиль <span style="color: rgb(255, 107, 53);">Black Ufa.</span> Стрижки, которые подчеркивают характер</h1>
+                                <div class="t-cover__descr">Мужские и детские стрижки от мастеров, для которых важны форма, чёткость линий и уважение к каждому клиенту.</div>
+                                <div class="t182__buttons">
+                                    <a href="#contacts" class="btn btn-secondary">Записаться онлайн</a>
+                                    <a href="#portfolio" class="btn btn-outline">Посмотреть работы</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Стрижка</h3>
-                    <p>Классические и современные мужские стрижки</p>
-                    <div class="price">от 1200 ₽</div>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-beard"></i>
-                    </div>
-                    <h3>Борода</h3>
-                    <p>Формирование, коррекция и укладка бороды</p>
-                    <div class="price">от 800 ₽</div>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Фейд</h3>
-                    <p>Точное выполнение фейдов любой сложности</p>
-                    <div class="price">от 1500 ₽</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Masters Section -->
-    <section class="section masters" id="masters">
+    <section class="section masters-section" id="masters">
         <div class="container">
-            <div class="section-title">
-                <h2>Мастера, которым доверяют</h2>
+            <div class="section-number">1 / Мастера</div>
+            <div class="section-header">
+                <h2 class="section-title"><span>Мастера, которым</span> <span style="color: rgb(255, 107, 53);">доверяют</span></h2>
+                <p>У каждого свой подход к форме и деталям — выбирайте барбера под свой стиль.</p>
             </div>
-            <div class="masters-grid">
-                <div class="master-card fade-in">
-                    <div class="master-img">
-                        <i class="fas fa-user"></i>
+            
+            <div class="slider-controls">
+                <div class="slider-buttons">
+                    <button class="slider-button slider-prev">
+                        <svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="presentation">
+                            <path d="M18.0093 13.5289L12.1461 19.5425M12.1461 19.5425L18.0093 25.556M12.1461 19.5425H26.8539" stroke="#060606" stroke-width="2px" vector-effect="non-scaling-stroke" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <button class="slider-button slider-next">
+                        <svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="presentation">
+                            <path d="M18.0093 13.5289L12.1461 19.5425M12.1461 19.5425L18.0093 25.556M12.1461 19.5425H26.8539" stroke="#060606" stroke-width="2px" vector-effect="non-scaling-stroke" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="scroll-icon">
+                    <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 300" height="42" width="42">
+                        <rect class="tooltip-horizontal-scroll-icon_card" x="480" width="200" height="200" rx="5" fill="rgba(255,255,255,0.2)"></rect>
+                        <rect class="tooltip-horizontal-scroll-icon_card" y="0" width="200" height="200" rx="5" fill="rgba(255,255,255,0.2)"></rect>
+                        <rect class="tooltip-horizontal-scroll-icon_card" x="240" width="200" height="200" rx="5" fill="rgba(255,255,255,0.2)"></rect>
+                        <path class="tooltip-horizontal-scroll-icon_hand" d="M78.9579 285.7C78.9579 285.7 37.8579 212.5 20.5579 180.8C-2.44209 138.6 -6.2422 120.8 9.6579 112C19.5579 106.5 33.2579 108.8 41.6579 123.4L61.2579 154.6V32.3C61.2579 32.3 60.0579 0 83.0579 0C107.558 0 105.458 32.3 105.458 32.3V91.7C105.458 91.7 118.358 82.4 133.458 86.6C141.158 88.7 150.158 92.4 154.958 104.6C154.958 104.6 185.658 89.7 200.958 121.4C200.958 121.4 236.358 114.4 236.358 151.1C236.358 187.8 192.158 285.7 192.158 285.7H78.9579Z" fill="rgba(255,255,255,1)"></path>
+                        <style>.tooltip-horizontal-scroll-icon_hand{animation:tooltip-horizontal-scroll-icon_anim-scroll-hand 2s infinite}.tooltip-horizontal-scroll-icon_card{animation:tooltip-horizontal-scroll-icon_anim-scroll-card 2s infinite}@keyframes tooltip-horizontal-scroll-icon_anim-scroll-hand{0%{transform:translateX(80px) scale(1);opacity:0}10%{transform:translateX(80px) scale(1);opacity:1}20%,60%{transform:translateX(175px) scale(.6);opacity:1}80%{transform:translateX(5px) scale(.6);opacity:1}to{transform:translateX(5px) scale(.6);opacity:0}}@keyframes tooltip-horizontal-scroll-icon_anim-scroll-card{0%,60%{transform:translateX(0)}80%,to{transform:translateX(-240px)}}</style>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="masters-slider" id="mastersSlider">
+                <div class="master-card">
+                    <div class="master-images">
+                        <div class="master-img-first" style="background-image: url('https://images.unsplash.com/photo-1524502397800-2f82475a6257?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');"></div>
+                        <div class="master-img-second" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');"></div>
                     </div>
-                    <div class="master-info">
-                        <h3>Александр</h3>
-                        <div class="specialty">Барбер</div>
-                        <p>Опыт работы более 8 лет, специализация - классические стрижки и фейды</p>
+                    <div class="master-content">
+                        <div class="master-subtitle">Старший барбер</div>
+                        <h3 class="master-title">Руслан</h3>
+                        <p class="master-desc">Мастер с 7-летним опытом, подбираю форму под структуру волос и делаю чистые мужские стрижки. Выполняю восковое удаление и камуфляж седины, собирая образ в аккуратный и естественный вид.</p>
+                        <a href="https://dikidi.net/730169?p=2.pi-mi-ssm&o=11&m=2055668" target="_blank" class="btn btn-secondary">Записаться</a>
                     </div>
                 </div>
-                <div class="master-card fade-in">
-                    <div class="master-img">
-                        <i class="fas fa-user"></i>
+                
+                <div class="master-card">
+                    <div class="master-images">
+                        <div class="master-img-first" style="background-image: url('https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');"></div>
+                        <div class="master-img-second" style="background-image: url('https://images.unsplash.com/photo-1524504516771-d1d7b32f4c52?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');"></div>
                     </div>
-                    <div class="master-info">
-                        <h3>Дмитрий</h3>
-                        <div class="specialty">Старший барбер</div>
-                        <p>Эксперт по моделированию бороды и сложным стрижкам</p>
+                    <div class="master-content">
+                        <div class="master-subtitle">Старший барбер</div>
+                        <h3 class="master-title">Арсений</h3>
+                        <p class="master-desc">Опыт в барберинге — 1,5 года, уверенно работаю со всеми типами мужских стрижек. Занимаюсь бородой и удлинёнными образами, подчёркивая стиль и особенности каждого клиента.</p>
+                        <a href="https://dikidi.net/730169?p=2.pi-mi-ssm&o=11&m=3745533" target="_blank" class="btn btn-secondary">Записаться</a>
                     </div>
                 </div>
-                <div class="master-card fade-in">
-                    <div class="master-img">
-                        <i class="fas fa-user"></i>
+                
+                <div class="master-card">
+                    <div class="master-images">
+                        <div class="master-img-first" style="background-image: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');"></div>
+                        <div class="master-img-second" style="background-image: url('https://images.unsplash.com/photo-1533435718860-f65509f843d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');"></div>
                     </div>
-                    <div class="master-info">
-                        <h3>Михаил</h3>
-                        <div class="specialty">Мастер-барбер</div>
-                        <p>Специалист по современным трендам и экспериментальным стрижкам</p>
+                    <div class="master-content">
+                        <div class="master-subtitle">Топ-барбер</div>
+                        <h3 class="master-title">Идель</h3>
+                        <p class="master-desc">Мастер с 7-летним опытом, уверенно работаю со всеми видами мужских стрижек. Специализируюсь на бороде и удлинённых формах, создавая аккуратный и выразительный образ.</p>
+                        <a href="https://dikidi.net/730169?p=2.pi-mi-ssm&o=11&m=4053586" target="_blank" class="btn btn-secondary">Записаться</a>
+                    </div>
+                </div>
+                
+                <div class="master-card">
+                    <div class="master-images">
+                        <div class="master-img-first" style="background-image: url('https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');"></div>
+                    </div>
+                    <div class="master-content">
+                        <div class="master-subtitle">Барбер</div>
+                        <h3 class="master-title">Андрей</h3>
+                        <p class="master-desc">Мастер с опытом 1,5 года, владею разными техниками мужских стрижек и работаю точно по форме. Уверенно оформляю бороду и удлинённые волосы, создавая чистый и индивидуальный образ.</p>
+                        <a href="https://dikidi.net/730169?p=2.pi-mi-ssm&o=11&m=4222920" target="_blank" class="btn btn-secondary">Записаться</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Work Quality Section -->
-    <section class="section work-quality" id="work">
-        <div class="quality-content">
-            <h2>Работаем точно, стрижём аккуратно</h2>
-            <p>Каждый наш мастер следует принципам идеальной аккуратности и внимания к деталям</p>
-            <a href="#booking" class="btn btn-secondary">Записаться на стрижку</a>
-        </div>
-    </section>
-
-    <!-- Gift Section -->
-    <section class="section gift-section">
+    <!-- Services Section -->
+    <section class="section services-section" id="services">
         <div class="container">
-            <div class="gift-content">
-                <div class="gift-text fade-in">
-                    <h2>Подарок, который всегда в тему</h2>
-                    <p>Подарочный сертификат от Black Barber - это возможность подарить стиль и уверенность. Сертификат можно приобрести на любую сумму и услугу. Это идеальный подарок для мужчины любого возраста.</p>
-                    <a href="#contacts" class="btn btn-accent">Купить сертификат</a>
+            <div class="section-number">2 / Услуги</div>
+            <h2 class="section-title"><span>Работаем</span> <span style="color: rgb(255, 107, 53);">точно,</span> стрижём аккуратно</h2>
+            <p style="text-align: center; font-size: 16px; line-height: 1.5; max-width: 450px; margin: 0 auto 40px; font-weight: 400; color: var(--light-gray); font-family: 'Inter', sans-serif;">В каждой услуге — чистая техника, внимание к форме и аккуратные линии.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-subtitle" style="color: white; font-size: 22px; line-height: 1.2; letter-spacing: 0px; font-weight: 400; font-family: 'SouthGhetto', serif;">Мужская стрижка</div>
+                    <h3 class="service-title"><a href="https://dikidi.net/730169?p=2.pi-ssm-sd&o=7&s=10517778&rl=0_undefined" class="service-link" target="_blank">Для коротких и средних волос</a></h3>
+                    <span class="service-price">от 1200 <strong style="font-family: Inter;">₽</strong> <span style="font-size: 14px; font-family: Inter; color: rgb(141, 141, 141);">1 час</span></span>
+                    <button class="btn btn-secondary">Записаться</button>
                 </div>
-                <div class="gift-image fade-in">
-                    <i class="fas fa-gift"></i>
+                
+                <div class="service-card">
+                    <div class="service-subtitle" style="color: white; font-size: 22px; line-height: 1.2; letter-spacing: 0px; font-weight: 400; font-family: 'SouthGhetto', serif;">Стрижка + борода/усы</div>
+                    <h3 class="service-title"><a href="https://dikidi.net/730169?p=2.pi-ssm-sd&o=7&s=6800527&rl=0_undefined" class="service-link" target="_blank">Комплексный аккуратный образ</a></h3>
+                    <span class="service-price">от 1800 <strong style="font-family: Inter;">₽</strong> <span style="font-size: 14px; font-family: Inter; color: rgb(141, 141, 141);">1,5 часа</span></span>
+                    <button class="btn btn-secondary">Записаться</button>
                 </div>
+                
+                <div class="service-card">
+                    <div class="service-subtitle" style="color: white; font-size: 22px; line-height: 1.2; letter-spacing: 0px; font-weight: 400; font-family: 'SouthGhetto', serif;">Детская стрижка</div>
+                    <h3 class="service-title"><a href="https://dikidi.net/730169?p=2.pi-ssm-sd&o=7&s=6800535&rl=0_undefined" class="service-link" target="_blank">Аккуратно, спокойно, безопасно</a></h3>
+                    <span class="service-price">от 800 <strong style="font-family: Inter;">₽</strong> <span style="font-size: 14px; font-family: Inter; color: rgb(141, 141, 141);">45 мин</span></span>
+                    <button class="btn btn-secondary">Записаться</button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-subtitle" style="color: white; font-size: 22px; line-height: 1.2; letter-spacing: 0px; font-weight: 400; font-family: 'SouthGhetto', serif;">Комбо «Отец и сын»</div>
+                    <h3 class="service-title"><a href="https://dikidi.net/730169?p=2.pi-ssm-sd&o=7&s=6800551&rl=0_undefined" class="service-link" target="_blank">Стильный визит вдвоём</a></h3>
+                    <span class="service-price">от 1500 <strong style="font-family: Inter;">₽</strong> <span style="color: rgb(141, 141, 141); font-size: 14px; font-family: Inter;">1,5 часа</span></span>
+                    <button class="btn btn-secondary">Записаться</button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-subtitle" style="color: white; font-size: 22px; line-height: 1.2; letter-spacing: 0px; font-weight: 400; font-family: 'SouthGhetto', serif;">Удлинённая стрижка</div>
+                    <h3 class="service-title"><a href="https://dikidi.net/730169?p=2.pi-ssm-sd&o=7&s=20642961&rl=0_undefined" class="service-link" target="_blank">Работа с формой и объёмом</a></h3>
+                    <span class="service-price">от 1600 <strong style="font-family: Inter;">₽</strong> <span style="color: rgb(141, 141, 141); font-family: Inter; font-size: 14px;">1,5 часа</span></span>
+                    <button class="btn btn-secondary">Записаться</button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-subtitle" style="color: white; font-size: 22px; line-height: 1.2; letter-spacing: 0px; font-weight: 400; font-family: 'SouthGhetto', serif;">Хим/био завивка</div>
+                    <h3 class="service-title"><a href="https://dikidi.net/730169?p=2.pi-ssm-sd&o=7&s=21162656&rl=0_undefined" class="service-link" target="_blank">Стойкая и аккуратная текстура</a></h3>
+                    <span class="service-price">от 4000 <strong style="font-family: Inter;">₽</strong> <span style="color: rgb(141, 141, 141); font-family: Inter; font-size: 14px;">3 часа</span></span>
+                    <button class="btn btn-secondary">Записаться</button>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 45px;">
+                <a href="https://dikidi.net/730169?p=1.pi-ssm&o=7" target="_blank" class="btn btn-outline">Все услуги</a>
             </div>
         </div>
     </section>
-
-    <!-- Results Section -->
-    <section class="section results">
+    
+    <section class="certificate-section" id="certificate">
         <div class="container">
-            <div class="section-title">
-                <h2>Результаты, которые говорят сами за себя</h2>
-            </div>
-            <div class="results-grid">
-                <div class="result-card fade-in">
-                    <div class="result-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h3>Профессионализм</h3>
-                    <p>Наши мастера имеют многолетний опыт и постоянно совершенствуют свои навыки</p>
+            <div class="certificate-content">
+                <div class="certificate-text">
+                    <div class="section-number">3 / Сертификат</div>
+                    <h2>Подарок, который всегда <span style="color: rgb(255, 107, 53);">в тему</span></h2>
+                    <p>Премиально оформленные сертификаты на услуги Black Ufa — для мужчины любого возраста.</p>
+                    <a href="https://t.me/blackbarbershopufa" target="_blank" class="btn btn-secondary">Уточнить детали</a>
                 </div>
-                <div class="result-card fade-in">
-                    <div class="result-icon">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h3>Качество</h3>
-                    <p>Мы используем только профессиональные инструменты и средства для достижения идеального результата</p>
-                </div>
-                <div class="result-card fade-in">
-                    <div class="result-icon">
-                        <i class="fas fa-smile"></i>
-                    </div>
-                    <h3>Довольные клиенты</h3>
-                    <p>Более 95% наших клиентов возвращаются к нам снова и рекомендуют нас друзьям</p>
-                </div>
+                <div class="certificate-image"></div>
             </div>
         </div>
     </section>
-
-    <!-- Trust Section -->
-    <section class="section trust-section">
-        <div class="trust-content">
-            <h2>Нам доверяют сотни клиентов</h2>
-            <p>Каждый день мы создаем идеальные образы для мужчин Уфы</p>
-            <div class="clients-count">
-                <div class="client-item">
-                    <div class="client-number">1200+</div>
-                    <div class="client-label">Довольных клиентов</div>
-                </div>
-                <div class="client-item">
-                    <div class="client-number">5000+</div>
-                    <div class="client-label">Успешных стрижек</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Booking Section -->
-    <section class="section booking-section" id="booking">
-        <div class="booking-container">
-            <h2>Давайте начнем ваш путь к стилю</h2>
-            <p>Выберите удобное время и мастера для записи</p>
-            <a href="#contacts" class="btn btn-secondary">Записаться сейчас</a>
-        </div>
-    </section>
-
-    <!-- Contacts Section -->
-    <section class="section contacts" id="contacts">
+    
+    <section class="portfolio-section" id="portfolio">
         <div class="container">
-            <div class="section-title">
-                <h2>Контакты</h2>
+            <div class="section-number">4 / Портфолио</div>
+            <h2 class="section-title"><span>Результаты, которые говорят</span> <span style="color: rgb(255, 107, 53);">сами за себя</span></h2>
+            
+            <div class="slider-controls">
+                <div class="slider-buttons">
+                    <button class="slider-button slider-prev">
+                        <svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="presentation">
+                            <path d="M18.0093 13.5289L12.1461 19.5425M12.1461 19.5425L18.0093 25.556M12.1461 19.5425H26.8539" stroke="#ffffff" stroke-width="2px" vector-effect="non-scaling-stroke" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <button class="slider-button slider-next">
+                        <svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="presentation">
+                            <path d="M18.0093 13.5289L12.1461 19.5425M12.1461 19.5425L18.0093 25.556M12.1461 19.5425H26.8539" stroke="#ffffff" stroke-width="2px" vector-effect="non-scaling-stroke" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="scroll-icon">
+                    <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 300" height="42" width="42">
+                        <rect class="tooltip-horizontal-scroll-icon_card" x="480" width="200" height="200" rx="5" fill="rgba(190,190,190,0.3)"></rect>
+                        <rect class="tooltip-horizontal-scroll-icon_card" y="0" width="200" height="200" rx="5" fill="rgba(190,190,190,0.3)"></rect>
+                        <rect class="tooltip-horizontal-scroll-icon_card" x="240" width="200" height="200" rx="5" fill="rgba(190,190,190,0.3)"></rect>
+                        <path class="tooltip-horizontal-scroll-icon_hand" d="M78.9579 285.7C78.9579 285.7 37.8579 212.5 20.5579 180.8C-2.44209 138.6 -6.2422 120.8 9.6579 112C19.5579 106.5 33.2579 108.8 41.6579 123.4L61.2579 154.6V32.3C61.2579 32.3 60.0579 0 83.0579 0C107.558 0 105.458 32.3 105.458 32.3V91.7C105.458 91.7 118.358 82.4 133.458 86.6C141.158 88.7 150.158 92.4 154.958 104.6C154.958 104.6 185.658 89.7 200.958 121.4C200.958 121.4 236.358 114.4 236.358 151.1C236.358 187.8 192.158 285.7 192.158 285.7H78.9579Z" fill="rgba(190,190,190,1)"></path>
+                        <style>.tooltip-horizontal-scroll-icon_hand{animation:tooltip-horizontal-scroll-icon_anim-scroll-hand 2s infinite}.tooltip-horizontal-scroll-icon_card{animation:tooltip-horizontal-scroll-icon_anim-scroll-card 2s infinite}@keyframes tooltip-horizontal-scroll-icon_anim-scroll-hand{0%{transform:translateX(80px) scale(1);opacity:0}10%{transform:translateX(80px) scale(1);opacity:1}20%,60%{transform:translateX(175px) scale(.6);opacity:1}80%{transform:translateX(5px) scale(.6);opacity:1}to{transform:translateX(5px) scale(.6);opacity:0}}@keyframes tooltip-horizontal-scroll-icon_anim-scroll-card{0%,60%{transform:translateX(0)}80%,to{transform:translateX(-240px)}}</style>
+                    </svg>
+                </div>
             </div>
-            <div class="contacts-grid">
-                <div class="contact-card fade-in">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h3>Адреса</h3>
-                    <ul class="addresses-list">
-                        <li>ул. 8 Марта, 22, Уфа</li>
-                        <li>пр. Октября, 46, Уфа</li>
-                        <li>ул. Космонавтов, 22, Уфа</li>
-                    </ul>
+            
+            <div class="portfolio-slider" id="portfolioSlider">
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1596461444120-3c51d8de8a58?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Стрижка">
                 </div>
-                <div class="contact-card fade-in">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
+                
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1529626455594-4ff08052d05c?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Стрижка">
+                    <div class="portfolio-video"></div>
+                    <div class="portfolio-play">
+                        <svg viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd">
+                            <path d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70ZM28 23.3333L47.8333 35.5833L28 47.8333V23.3333Z" fill="#ffffff"/>
+                        </svg>
                     </div>
-                    <h3>Телефоны</h3>
-                    <div class="contact-info">
-                        <span class="phone-number">+7 (996) 106-03-94</span>
-                        <span class="phone-number">+7 (347) 216-03-94</span>
-                    </div>
-                    <p>Ежедневно с 9:00 до 21:00</p>
                 </div>
-                <div class="contact-card fade-in">
-                    <div class="contact-icon">
-                        <i class="fas fa-clock"></i>
+                
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1524504516771-d1d7b32f4c52?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Стрижка">
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Стрижка">
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Стрижка">
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Стрижка">
+                    <div class="portfolio-video"></div>
+                    <div class="portfolio-play">
+                        <svg viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd">
+                            <path d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70ZM28 23.3333L47.8333 35.5833L28 47.8333V23.3333Z" fill="#ffffff"/>
+                        </svg>
                     </div>
-                    <h3>Режим работы</h3>
-                    <div class="contact-info">
-                        <p>Пн-Вс: 9:00 - 21:00</p>
-                        <p>Без выходных</p>
-                    </div>
-                    <div class="schedule">Прием по предварительной записи</div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1524502397800-2f82475a6257?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Стрижка">
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
+    
+    <section class="education-section" id="education">
+        <div class="container">
+            <div class="section-number">5 / Обучение</div>
+            <div class="education-content">
+                <div class="education-text">
+                    <h2>Освой <span style="color: rgb(255, 107, 53);">профессию барбера</span> с практикой с первого дня</h2>
+                    <p>Курс для тех, кто хочет овладеть техникой мужских стрижек на уровне действующих мастеров и научиться создавать аккуратные, продуманные формы. И зарабатывать своим делом так, чтобы клиенты возвращались снова и снова.</p>
+                </div>
+                <div class="education-features">
+                    <div class="education-feature">
+                        <div class="feature-icon">
+                            <img src="https://static.tildacdn.com/lib/icons/bullets/check5.svg" alt="Иконка" data-color="#eb7317">
+                        </div>
+                        <div class="feature-text">
+                            <h3>Ежедневная практика</h3>
+                            <p>Вы работаете руками с первого дня — без лишней теории.</p>
+                        </div>
+                    </div>
+                    <div class="education-feature">
+                        <div class="feature-icon">
+                            <img src="https://static.tildacdn.com/lib/icons/bullets/check5.svg" alt="Иконка" data-color="#eb7317">
+                        </div>
+                        <div class="feature-text">
+                            <h3>Реальные модели</h3>
+                            <p>Мы предоставляем моделей для опыта настоящей работы.</p>
+                        </div>
+                    </div>
+                    <div class="education-feature">
+                        <div class="feature-icon">
+                            <img src="https://static.tildacdn.com/lib/icons/bullets/check5.svg" alt="Иконка" data-color="#eb7317">
+                        </div>
+                        <div class="feature-text">
+                            <h3>Чистая техника</h3>
+                            <p>Два преподавателя показывают технику, исправляют ошибки и ведут до результата.</p>
+                        </div>
+                    </div>
+                    <div class="education-feature">
+                        <div class="feature-icon">
+                            <img src="https://static.tildacdn.com/lib/icons/bullets/check5.svg" alt="Иконка" data-color="#eb7317">
+                        </div>
+                        <div class="feature-text">
+                            <h3>Портфолио</h3>
+                            <p>Поможем собрать фото, выстроить сервис и начать принимать клиентов.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="education.html" class="btn btn-outline">Подробнее о курсе</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="reviews-section" id="reviews">
+        <div class="container">
+            <div class="section-number">6 / Отзывы</div>
+            <h2 class="section-title"><span>Нам доверяют</span> <span style="color: rgb(255, 107, 53);">сотни</span> клиентов</h2>
+            
+            <div class="slider-controls">
+                <div class="slider-buttons">
+                    <button class="slider-button slider-prev">
+                        <svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="presentation">
+                            <path d="M18.0093 13.5289L12.1461 19.5425M12.1461 19.5425L18.0093 25.556M12.1461 19.5425H26.8539" stroke="#ffffff" stroke-width="2px" vector-effect="non-scaling-stroke" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <button class="slider-button slider-next">
+                        <svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="presentation">
+                            <path d="M18.0093 13.5289L12.1461 19.5425M12.1461 19.5425L18.0093 25.556M12.1461 19.5425H26.8539" stroke="#ffffff" stroke-width="2px" vector-effect="non-scaling-stroke" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="scroll-icon">
+                    <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 300" height="42" width="42">
+                        <rect class="tooltip-horizontal-scroll-icon_card" x="480" width="200" height="200" rx="5" fill="rgba(255,255,255,0.2)"></rect>
+                        <rect class="tooltip-horizontal-scroll-icon_card" y="0" width="200" height="200" rx="5" fill="rgba(255,255,255,0.2)"></rect>
+                        <rect class="tooltip-horizontal-scroll-icon_card" x="240" width="200" height="200" rx="5" fill="rgba(255,255,255,0.2)"></rect>
+                        <path class="tooltip-horizontal-scroll-icon_hand" d="M78.9579 285.7C78.9579 285.7 37.8579 212.5 20.5579 180.8C-2.44209 138.6 -6.2422 120.8 9.6579 112C19.5579 106.5 33.2579 108.8 41.6579 123.4L61.2579 154.6V32.3C61.2579 32.3 60.0579 0 83.0579 0C107.558 0 105.458 32.3 105.458 32.3V91.7C105.458 91.7 118.358 82.4 133.458 86.6C141.158 88.7 150.158 92.4 154.958 104.6C154.958 104.6 185.658 89.7 200.958 121.4C200.958 121.4 236.358 114.4 236.358 151.1C236.358 187.8 192.158 285.7 192.158 285.7H78.9579Z" fill="rgba(255,255,255,1)"></path>
+                        <style>.tooltip-horizontal-scroll-icon_hand{animation:tooltip-horizontal-scroll-icon_anim-scroll-hand 2s infinite}.tooltip-horizontal-scroll-icon_card{animation:tooltip-horizontal-scroll-icon_anim-scroll-card 2s infinite}@keyframes tooltip-horizontal-scroll-icon_anim-scroll-hand{0%{transform:translateX(80px) scale(1);opacity:0}10%{transform:translateX(80px) scale(1);opacity:1}20%,60%{transform:translateX(175px) scale(.6);opacity:1}80%{transform:translateX(5px) scale(.6);opacity:1}to{transform:translateX(5px) scale(.6);opacity:0}}@keyframes tooltip-horizontal-scroll-icon_anim-scroll-card{0%,60%{transform:translateX(0)}80%,to{transform:translateX(-240px)}}</style>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="reviews-slider" id="reviewsSlider">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div>
+                            <div class="review-title">Александр</div>
+                            <div class="review-service">Мужская стрижка</div>
+                        </div>
+                    </div>
+                    <div class="review-text">Стригусь у ребят уже больше года. Всегда одинаково аккуратно, чистые линии и форма, которая держится. Даже через две недели стрижка выглядит ухоженно.</div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div>
+                            <div class="review-title">Евгений</div>
+                            <div class="review-service">Стрижка + борода</div>
+                        </div>
+                    </div>
+                    <div class="review-text">Нравится, что тут нет суеты — спокойно, по-мужски, без лишних разговоров. Мастер работает чётко, объясняет, что подойдёт лучше. Сюда реально хочется возвращаться.</div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div>
+                            <div class="review-title">Михаил</div>
+                            <div class="review-service">Детская стрижка</div>
+                        </div>
+                    </div>
+                    <div class="review-text">Водил сына — сделали аккуратно, спокойно и без капризов. Мастер сразу нашёл подход, результат получился отличный. Теперь записываемся только сюда.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contacts-section" id="contacts">
+        <div class="container">
+            <div class="section-number">7 / Контакты</div>
+            <div class="contacts-content">
+                <div class="contacts-info">
+                    <h2 class="contacts-title">Давайте начнем <span style="color: rgb(255, 107, 53);">ваш путь</span> к стилю</h2>
+                    <div class="contacts-text">г. Уфа, Айская 84</div>
+                    <div class="contacts-text"><span style="color: rgb(141, 141, 141); font-family: Inter; font-size: 14px;">11:00 - 21:00</span></div>
+                    <div class="contacts-text" style="margin-top: 20px;"><a href="tel:+79961060394" style="color: white;">+7 996 106 03-94</a></div>
+                    <div class="social-links">
+                        <a href="https://t.me/blackbarberufa" target="_blank" class="social-icon" aria-label="telegram">
+                            <svg class="social-icon_svg" role="presentation" width="25px" height="25px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M83.1797 17.5886C83.1797 17.5886 90.5802 14.7028 89.9635 21.711C89.758 24.5968 87.9079 34.6968 86.4688 45.6214L81.5351 77.9827C81.5351 77.9827 81.124 82.7235 77.4237 83.548C73.7233 84.3724 68.173 80.6623 67.145 79.8378C66.3227 79.2195 51.7273 69.9438 46.5878 65.4092C45.1488 64.1724 43.5042 61.6989 46.7934 58.8132L68.3785 38.201C70.8454 35.7274 73.3122 29.956 63.0336 36.9642L34.2535 56.5459C34.2535 56.5459 30.9644 58.6071 24.7973 56.752L11.4351 52.6295C11.4351 52.6295 6.50135 49.5377 14.9298 46.4457C35.4871 36.7579 60.7724 26.864 83.1797 17.5886Z" fill="#eb7317"/>
+                            </svg>
+                        </a>
+                        <a href="https://vk.com/black_barbershop" target="_blank" class="social-icon" aria-label="vk">
+                            <svg class="social-icon_svg" role="presentation" width="25px" height="25px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M53.7512 76.4147C25.0516 76.4147 8.68207 56.7395 8 24H22.376C22.8482 48.03 33.4463 58.2086 41.8411 60.3073V24H55.3782V44.7245C63.668 43.8326 72.3765 34.3885 75.3146 24H88.8514C86.5954 36.802 77.1513 46.2461 70.4355 50.1287C77.1513 53.2767 87.9076 61.5141 92 76.4147H77.0988C73.8983 66.446 65.9241 58.7333 55.3782 57.684V76.4147H53.7512Z" fill="#eb7317"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/black_barber_ufa?igsh=Z2k5ZjU5bjY5OXZx" target="_blank" class="social-icon" aria-label="instagram">
+                            <svg class="social-icon_svg" role="presentation" width="25px" height="25px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M66.9644 10H33.04C20.3227 10 10 20.3227 10 32.9573V67.1167C10 79.6816 20.3227 90 33.04 90H66.96C79.6816 90 90 79.6816 90 67.0384V32.9616C90.0044 20.3227 79.6816 10 66.9644 10ZM29.2 50.0022C29.2 38.5083 38.5257 29.2 50.0022 29.2C61.4786 29.2 70.8 38.5083 70.8 50.0022C70.8 61.4961 61.4743 70.8 50.0022 70.8C38.5257 70.8 29.2 61.4961 29.2 50.0022ZM72.8854 31.2027C70.2079 31.2027 68.0789 29.0824 68.0789 26.4049C68.0789 23.7273 70.2035 21.6027 72.8854 21.6027C75.5586 21.6027 77.6833 23.7273 77.6833 26.4049C77.6833 29.0824 75.5586 31.2027 72.8854 31.2027Z" fill="#eb7317"/>
+                                <path d="M50.0022 36.4011C42.4659 36.4011 36.4011 42.4876 36.4011 50.0022C36.4011 57.5124 42.4659 63.6033 50.0022 63.6033C57.5429 63.6033 63.6033 57.5124 63.6033 50.0022C63.6033 42.492 57.4514 36.4011 50.0022 36.4011Z" fill="#eb7317"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="contacts-map"></div>
+            </div>
+        </div>
+    </section>
+    
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>BlackBarber</h3>
-                    <p>Профессиональный мужской барбершоп в Уфе с многолетним опытом работы. Создаем стиль, который подчеркивает ваш характер.</p>
+                    <p style="font-size: 14px; line-height: 1.5; font-weight: 400; color: var(--light-gray); font-family: 'Inter', sans-serif;">Профессиональный мужской барбершоп в Уфе с многолетним опытом работы. Создаем стиль, который подчеркивает ваш характер.</p>
                 </div>
                 <div class="footer-col">
                     <h3>Ссылки</h3>
                     <ul class="footer-links">
-                        <li><a href="#home">Главная</a></li>
-                        <li><a href="#services">Услуги</a></li>
                         <li><a href="#masters">Мастера</a></li>
-                        <li><a href="#work">О нас</a></li>
-                        <li><a href="#booking">Запись</a></li>
+                        <li><a href="#services">Услуги</a></li>
+                        <li><a href="#certificate">Сертификат</a></li>
+                        <li><a href="#portfolio">Портфолио</a></li>
+                        <li><a href="#education">Обучение</a></li>
+                        <li><a href="#reviews">Отзывы</a></li>
                         <li><a href="#contacts">Контакты</a></li>
                         <li><a href="education.html">Обучение</a></li>
                     </ul>
@@ -1166,111 +1784,233 @@
                         <li><i class="fas fa-map-marker-alt"></i> г. Уфа, ул. 8 Марта, 22</li>
                     </ul>
                 </div>
+                <div class="footer-col">
+                    <h3>Соцсети</h3>
+                    <ul class="footer-links social-links-footer" style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <li><a href="https://t.me/blackbarbershopufa" target="_blank" rel="nofollow" aria-label="telegram" class="social-icon">
+                            <svg class="social-icon_svg" role="presentation" width="20px" height="20px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M83.1797 17.5886C83.1797 17.5886 90.5802 14.7028 89.9635 21.711C89.758 24.5968 87.9079 34.6968 86.4688 45.6214L81.5351 77.9827C81.5351 77.9827 81.124 82.7235 77.4237 83.548C73.7233 84.3724 68.173 80.6623 67.145 79.8378C66.3227 79.2195 51.7273 69.9438 46.5878 65.4092C45.1488 64.1724 43.5042 61.6989 46.7934 58.8132L68.3785 38.201C70.8454 35.7274 73.3122 29.956 63.0336 36.9642L34.2535 56.5459C34.2535 56.5459 30.9644 58.6071 24.7973 56.752L11.4351 52.6295C11.4351 52.6295 6.50135 49.5377 14.9298 46.4457C35.4871 36.7579 60.7724 26.864 83.1797 17.5886Z" fill="#eb7317"/>
+                            </svg>
+                        </a></li>
+                        <li><a href="https://vk.com/black_barbershop" target="_blank" rel="nofollow" aria-label="vk" class="social-icon">
+                            <svg class="social-icon_svg" role="presentation" width="20px" height="20px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M53.7512 76.4147C25.0516 76.4147 8.68207 56.7395 8 24H22.376C22.8482 48.03 33.4463 58.2086 41.8411 60.3073V24H55.3782V44.7245C63.668 43.8326 72.3765 34.3885 75.3146 24H88.8514C86.5954 36.802 77.1513 46.2461 70.4355 50.1287C77.1513 53.2767 87.9076 61.5141 92 76.4147H77.0988C73.8983 66.446 65.9241 58.7333 55.3782 57.684V76.4147H53.7512Z" fill="#eb7317"/>
+                            </svg>
+                        </a></li>
+                        <li><a href="https://www.instagram.com/black_barber_ufa?igsh=Z2k5ZjU5bjY5OXZx" target="_blank" rel="nofollow" aria-label="instagram" class="social-icon">
+                            <svg class="social-icon_svg" role="presentation" width="20px" height="20px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M66.9644 10H33.04C20.3227 10 10 20.3227 10 32.9573V67.1167C10 79.6816 20.3227 90 33.04 90H66.96C79.6816 90 90 79.6816 90 67.0384V32.9616C90.0044 20.3227 79.6816 10 66.9644 10ZM29.2 50.0022C29.2 38.5083 38.5257 29.2 50.0022 29.2C61.4786 29.2 70.8 38.5083 70.8 50.0022C70.8 61.4961 61.4743 70.8 50.0022 70.8C38.5257 70.8 29.2 61.4961 29.2 50.0022ZM72.8854 31.2027C70.2079 31.2027 68.0789 29.0824 68.0789 26.4049C68.0789 23.7273 70.2035 21.6027 72.8854 21.6027C75.5586 21.6027 77.6833 23.7273 77.6833 26.4049C77.6833 29.0824 75.5586 31.2027 72.8854 31.2027Z" fill="#eb7317"/>
+                                <path d="M50.0022 36.4011C42.4659 36.4011 36.4011 42.4876 36.4011 50.0022C36.4011 57.5124 42.4659 63.6033 50.0022 63.6033C57.5429 63.6033 63.6033 57.5124 63.6033 50.0022C63.6033 42.492 57.4514 36.4011 50.0022 36.4011Z" fill="#eb7317"/>
+                            </svg>
+                        </a></li>
+                    </ul>
+                </div>
             </div>
             <div class="copyright">
                 <p>&copy; 2026 BlackBarber. Все права защищены.</p>
+                <p class="footer-note">*Meta признана экстремистской организацией и запрещенной в России</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Preloader
-        window.addEventListener('load', function() {
-            const preloader = document.getElementById('preloader');
+        // Loader animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const loader = document.getElementById('loader');
+            const body = document.body;
             
-            // Ждем 1.5 секунды перед исчезновением прелоадера
-            setTimeout(() => {
-                preloader.classList.add('fade-out');
+            // Simulate page load time
+            setTimeout(function() {
+                loader.style.opacity = '0';
+                loader.style.visibility = 'hidden';
                 
-                // Удаляем прелоадер из DOM после анимации
-                setTimeout(() => {
-                    preloader.style.display = 'none';
+                // Remove loader after animation completes
+                setTimeout(function() {
+                    loader.remove();
+                    body.style.overflow = 'auto';
                 }, 500);
-            }, 1500);
-        });
-
-        // Если страница уже загружена (из кэша)
-        if (document.readyState === 'complete') {
-            document.getElementById('preloader').style.display = 'none';
-        }
-
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navLinks = document.getElementById('navLinks');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
-                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-        });
-
-        // Close mobile menu when clicking on links
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }, 2000); // 2 seconds loading time
+            
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+            
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
             });
-        });
-
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(51, 51, 51, 0.98)';
-                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-            } else {
-                header.style.background = 'rgba(51, 51, 51, 0.95)';
-                header.style.boxShadow = 'none';
+            
+            // Close mobile menu when clicking on links
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                });
+            });
+            
+            // Header scroll effect
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('header');
+                if (window.scrollY > 100) {
+                    header.style.background = 'rgba(51, 51, 51, 0.98)';
+                    header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+                } else {
+                    header.style.background = 'rgba(51, 51, 51, 0.95)';
+                    header.style.boxShadow = 'none';
+                }
+            });
+            
+            // Cookie notification
+            const cookieNotification = document.getElementById('cookieNotification');
+            const cookieBtn = cookieNotification.querySelector('.cookie-btn');
+            const cookieClose = cookieNotification.querySelector('.cookie-close');
+            
+            // Check if user has already accepted cookies
+            if (localStorage.getItem('cookiesAccepted') === 'true') {
+                cookieNotification.classList.add('hidden');
             }
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
+            
+            cookieBtn.addEventListener('click', () => {
+                localStorage.setItem('cookiesAccepted', 'true');
+                cookieNotification.classList.add('hidden');
+            });
+            
+            cookieClose.addEventListener('click', () => {
+                cookieNotification.classList.add('hidden');
+            });
+            
+            // Slider functionality
+            function initSlider(sliderId, prevBtnClass, nextBtnClass) {
+                const slider = document.getElementById(sliderId);
+                const prevBtn = slider.parentElement.querySelector(prevBtnClass);
+                const nextBtn = slider.parentElement.querySelector(nextBtnClass);
+                let isDragging = false;
+                let startPos = 0;
+                let currentTranslate = 0;
+                let prevTranslate = 0;
+                let animationID;
+                let currentIndex = 0;
                 
-                const target = document.querySelector(targetId);
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
+                if (!slider || !prevBtn || !nextBtn) return;
+                
+                prevBtn.addEventListener('click', () => {
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                        setSliderPosition();
+                    }
+                });
+                
+                nextBtn.addEventListener('click', () => {
+                    const maxIndex = slider.children.length - 1;
+                    if (currentIndex < maxIndex) {
+                        currentIndex++;
+                        setSliderPosition();
+                    }
+                });
+                
+                function setSliderPosition() {
+                    const itemWidth = slider.children[0].offsetWidth + parseInt(getComputedStyle(slider).gap);
+                    currentTranslate = -currentIndex * itemWidth;
+                    slider.style.transform = `translateX(${currentTranslate}px)`;
                 }
-            });
-        });
-
-        // Fade-in animation on scroll
-        const fadeElements = document.querySelectorAll('.fade-in');
-
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('appear');
-                    observer.unobserve(entry.target);
+                
+                // Touch events for mobile
+                slider.addEventListener('mousedown', dragStart);
+                slider.addEventListener('touchstart', dragStart);
+                
+                slider.addEventListener('mousemove', drag);
+                slider.addEventListener('touchmove', drag);
+                
+                slider.addEventListener('mouseup', dragEnd);
+                slider.addEventListener('mouseleave', dragEnd);
+                slider.addEventListener('touchend', dragEnd);
+                
+                function dragStart(event) {
+                    isDragging = true;
+                    startPos = getPositionX(event);
+                    animationID = requestAnimationFrame(animation);
                 }
+                
+                function drag(event) {
+                    if (isDragging) {
+                        const currentPosition = getPositionX(event);
+                        currentTranslate = prevTranslate + currentPosition - startPos;
+                    }
+                }
+                
+                function dragEnd() {
+                    isDragging = false;
+                    cancelAnimationFrame(animationID);
+                    
+                    const itemWidth = slider.children[0].offsetWidth + parseInt(getComputedStyle(slider).gap);
+                    const movedBy = currentTranslate - prevTranslate;
+                    
+                    // If moved enough negative then snap to next item
+                    if (movedBy < -100 && currentIndex < slider.children.length - 1) currentIndex++;
+                    
+                    // If moved enough positive then snap to previous item
+                    if (movedBy > 100 && currentIndex > 0) currentIndex--;
+                    
+                    setSliderPosition();
+                    prevTranslate = currentTranslate;
+                }
+                
+                function animation() {
+                    if (isDragging) requestAnimationFrame(animation);
+                }
+                
+                function getPositionX(event) {
+                    return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+                }
+            }
+            
+            // Initialize sliders
+            initSlider('mastersSlider', '.slider-prev', '.slider-next');
+            initSlider('portfolioSlider', '.slider-prev', '.slider-next');
+            initSlider('reviewsSlider', '.slider-prev', '.slider-next');
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
             });
-        }, observerOptions);
-
-        fadeElements.forEach(element => {
-            observer.observe(element);
-        });
-
-        // Initialize animations on page load
-        document.addEventListener('DOMContentLoaded', () => {
-            // Check if elements are already in viewport on load
+            
+            // Fade-in animation on scroll
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('appear');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
             fadeElements.forEach(element => {
-                const rect = element.getBoundingClientRect();
-                if (rect.top < window.innerHeight && rect.bottom > 0) {
-                    element.classList.add('appear');
-                }
+                observer.observe(element);
             });
         });
     </script>
